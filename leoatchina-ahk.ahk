@@ -1,1 +1,11 @@
-Capslock::Control ; 把Capslock替换为Control 
+#InstallKeybdHook
+
+Capslock::
+Send {LControl Down}
+KeyWait, CapsLock
+Send {LControl Up}
+if ( A_PriorKey = "CapsLock" )
+{
+	Send {Esc}
+}
+return
