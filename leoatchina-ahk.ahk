@@ -1,0 +1,1 @@
+Capslock::Control ; 把Capslock替换为Control 
