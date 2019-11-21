@@ -22,3 +22,11 @@ if ( A_PriorKey = "Capslock" )
 	Send {Esc}
 }
 return
+
+#IfWinActive ahk_exe nvim-qt.exe 
+^Space::^\
+return
+
+#IfWinActive ahk_exe gvim.exe 
+^Space::^\
+return
