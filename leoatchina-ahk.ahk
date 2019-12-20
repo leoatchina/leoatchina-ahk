@@ -12,21 +12,34 @@ RAlt & d::
 	SEND, {Right}
 	Return
 
-#InstallKeybdHook
-Capslock::
-Send {LControl Down}
-KeyWait, Capslock
-Send {LControl Up}
-if ( A_PriorKey = "Capslock" )
+
+#IfWinActive ahk_exe nvim-qt.exe
 {
-	Send {Esc}
+	^Space::^\
+	return
 }
-return
+#IfWinActive
 
-#IfWinActive ahk_exe nvim-qt.exe 
-^Space::^\
-return
+#IfWinActive ahk_exe gvim.exe
+{
+	^Space::^\
+	return
+}
+#IfWinActive
 
-#IfWinActive ahk_exe gvim.exe 
-^Space::^\
-return
+#IfWinActive ahk_class CASCADIA_HOSTING_WINDOW_CLASS
+{
+	^Space::^\
+	return
+}
+#IfWinActive
+
+
++Capslock::Esc 
+^Capslock::Capslock 			; make shift+Caps-Lock the Caps Lock toggle
+Capslock::Control  
+
+
+
+
+
