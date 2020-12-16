@@ -1,5 +1,5 @@
 #IfWinActive ahk_class classFoxitReader
-^#c:: 
+!#c:: 
     tmp := RegExReplace(clipboard, "(\S.*?)\R(.*?\S)", "$1 $2")
     clipboard := tmp
     ; StringReplace clipboard, clipboard, % " ", % "", A
