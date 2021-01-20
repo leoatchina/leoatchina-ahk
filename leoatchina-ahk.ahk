@@ -12,6 +12,5 @@ RAlt & d::
 	SEND, {Right}
 	Return
 
-+Capslock::Esc
-^Capslock::Capslock 			; make shift+Caps-Lock the Caps Lock toggle
-Capslock::Control
+Capslock::Esc
+^Capslock::Capslock 			; make ctrl+Caps-Lock the Caps Lock toggle
