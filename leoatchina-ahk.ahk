@@ -11,6 +11,9 @@ RAlt & s::
 RAlt & d::
 	SEND, {Right}
 	Return
+RShift & Space::
+        SEND, {Esc}
+        Return
 
 Capslock::Esc
 ^Capslock::Capslock 			; make ctrl+Caps-Lock the Caps Lock toggle
