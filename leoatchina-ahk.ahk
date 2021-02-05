@@ -1,7 +1,7 @@
-; Autohotkey Capslock Remapping Script 
+; Autohotkey Capslock Remapping Script
 ; - Deactivates capslock for normal (accidental) use.
 ; - Hold Capslock and drag anywhere in a window to move it (not just the title bar).
-; - Access the following functions when pressing Capslock: 
+; - Access the following functions when pressing Capslock:
     ;Cursor keys        - h, j, k, l
     ;Home,End           - N, ;
     ;Page up,down       - - =
@@ -47,4 +47,4 @@ Capslock & x::SendInput {Blind}{Del Down}
 Capslock & x up::SendInput {Blind}{Del Up}
 
 ; make ctrl+Caps-Lock the Caps Lock toggle
-^Capslock::Capslock 			
+^Capslock::Capslock
