@@ -31,7 +31,7 @@ Capslock & i::SendInput {Blind}{Insert Down}
 Capslock & i up::SendInput {Blind}{Insert Up}
 Capslock & x::SendInput {Blind}{Del Down}
 Capslock & x up::SendInput {Blind}{Del Up}
-Capslock & o::SendInput {Blind}{BS Down}
-Capslock & o up::SendInput {Blind}{BS Up}
+Capslock & a::SendInput {Blind}{BS Down}
+Capslock & a up::SendInput {Blind}{BS Up}
 ; make ctrl+Caps-Lock the Caps Lock toggle
 ^Capslock::Capslock
