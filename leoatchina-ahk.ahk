@@ -22,8 +22,10 @@ Capslock & d up::SendInput {Blind}{PgDn Up}
 ; Esc
 Capslock & c::SendInput {Blind}{Esc Down}
 Capslock & c up::SendInput {Blind}{Esc Up}
-RCtrl & Space::SendInput {Blind}{Esc Down}
-RCtrl & Space up::SendInput {Blind}{Esc Up}
+Capslock & Shift::SendInput {Blind}{Esc Down}
+Capslock & Shift up::SendInput {Blind}{Esc Up}
+Shift & Capslock::SendInput {Blind}{Esc Down}
+Shift & Capslock up::SendInput {Blind}{Esc Up}
 ; insert del backspace
 Capslock & i::SendInput {Blind}{Insert Down}
 Capslock & i up::SendInput {Blind}{Insert Up}
