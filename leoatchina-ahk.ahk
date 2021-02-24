@@ -20,8 +20,6 @@ Capslock & u up::SendInput {Blind}{PgUp Up}
 Capslock & d::SendInput {Blind}{PgDn Down}
 Capslock & d up::SendInput {Blind}{PgDn Up}
 ; Esc
-Capslock & c::SendInput {Blind}{Esc Down}
-Capslock & c up::SendInput {Blind}{Esc Up}
 Capslock & Shift::SendInput {Blind}{Esc Down}
 Capslock & Shift up::SendInput {Blind}{Esc Up}
 Shift & Capslock::SendInput {Blind}{Esc Down}
