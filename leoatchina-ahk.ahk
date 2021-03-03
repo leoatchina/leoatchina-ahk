@@ -22,14 +22,16 @@ Capslock & d up::SendInput {Blind}{PgDn Up}
 ; Esc
 Capslock & Shift::SendInput {Blind}{Esc Down}
 Capslock & Shift up::SendInput {Blind}{Esc Up}
+Capslock & Enter::SendInput {Blind}{Esc Down}
+Capslock & Enter up::SendInput {Blind}{Esc Up}
 Shift & Capslock::SendInput {Blind}{Esc Down}
 Shift & Capslock up::SendInput {Blind}{Esc Up}
-; insert del backspace
+; Insert del backspace
 Capslock & i::SendInput {Blind}{Insert Down}
 Capslock & i up::SendInput {Blind}{Insert Up}
 Capslock & x::SendInput {Blind}{Del Down}
 Capslock & x up::SendInput {Blind}{Del Up}
 Capslock & a::SendInput {Blind}{BS Down}
 Capslock & a up::SendInput {Blind}{BS Up}
-; make ctrl+Caps-Lock the Caps Lock toggle
+; Caps Lock toggle
 ^Capslock::Capslock
