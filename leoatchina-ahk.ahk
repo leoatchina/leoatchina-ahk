@@ -26,12 +26,13 @@ Capslock & Enter::SendInput {Blind}{Esc Down}
 Capslock & Enter up::SendInput {Blind}{Esc Up}
 Shift & Capslock::SendInput {Blind}{Esc Down}
 Shift & Capslock up::SendInput {Blind}{Esc Up}
-; Insert del backspace
-Capslock & i::SendInput {Blind}{Insert Down}
-Capslock & i up::SendInput {Blind}{Insert Up}
+; del backspace
 Capslock & x::SendInput {Blind}{Del Down}
 Capslock & x up::SendInput {Blind}{Del Up}
 Capslock & a::SendInput {Blind}{BS Down}
 Capslock & a up::SendInput {Blind}{BS Up}
+; copy & paste
+Capslock & v::Send {Shift down}{Ins}{Shift up}
+Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; Caps Lock toggle
 ^Capslock::Capslock
