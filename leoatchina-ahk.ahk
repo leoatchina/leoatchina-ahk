@@ -36,3 +36,12 @@ Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; Caps Lock toggle
 ^Capslock::Capslock
+
+
+; 去除复制来的内容里的回车
+!#c::
+    tmp := RegExReplace(clipboard, "(\S.*?)\R(.*?\S)", "$1 $2")
+    clipboard := tmp
+    ; StringReplace clipboard, clipboard, % " ", % "", A
+    clipwait 0.1
+return
