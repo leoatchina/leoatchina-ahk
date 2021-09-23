@@ -27,10 +27,10 @@ Capslock & Enter up::SendInput {Blind}{Esc Up}
 Shift & Capslock::SendInput {Blind}{Esc Down}
 Shift & Capslock up::SendInput {Blind}{Esc Up}
 ; del backspace
-Capslock & x::SendInput {Blind}{Del Down}
-Capslock & x up::SendInput {Blind}{Del Up}
-Capslock & a::SendInput {Blind}{BS Down}
-Capslock & a up::SendInput {Blind}{BS Up}
+Capslock & a::SendInput {Blind}{Del Down}
+Capslock & a up::SendInput {Blind}{Del Up}
+Capslock & x::SendInput {Blind}{BS Down}
+Capslock & x up::SendInput {Blind}{BS Up}
 ; copy & paste
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
