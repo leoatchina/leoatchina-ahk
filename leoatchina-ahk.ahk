@@ -30,6 +30,8 @@ Ctrl & Capslock::SendInput {Blind}{Esc Down}
 Ctrl & Capslock up::SendInput {Blind}{Esc Up}
 Capslock & Enter::SendInput {Blind}{Esc Down}
 Capslock & Enter up::SendInput {Blind}{Esc Up}
+Capslock & \::SendInput {Blind}{Esc Down}
+Capslock & \ up::SendInput {Blind}{Esc Up}
 ; del
 Capslock & x::SendInput {Blind}{Del Down}
 Capslock & x up::SendInput {Blind}{Del Up}
