@@ -22,21 +22,25 @@ Capslock & d up::SendInput {Blind}{PgDn Up}
 ; Esc
 Capslock & Shift::SendInput {Blind}{Esc Down}
 Capslock & Shift up::SendInput {Blind}{Esc Up}
-Capslock & Enter::SendInput {Blind}{Esc Down}
-Capslock & Enter up::SendInput {Blind}{Esc Up}
 Shift & Capslock::SendInput {Blind}{Esc Down}
 Shift & Capslock up::SendInput {Blind}{Esc Up}
-; del backspace
-Capslock & a::SendInput {Blind}{Del Down}
-Capslock & a up::SendInput {Blind}{Del Up}
-Capslock & x::SendInput {Blind}{BS Down}
-Capslock & x up::SendInput {Blind}{BS Up}
+Capslock & Ctrl::SendInput {Blind}{Esc Down}
+Capslock & Ctrl up::SendInput {Blind}{Esc Up}
+Ctrl & Capslock::SendInput {Blind}{Esc Down}
+Ctrl & Capslock up::SendInput {Blind}{Esc Up}
+Capslock & Enter::SendInput {Blind}{Esc Down}
+Capslock & Enter up::SendInput {Blind}{Esc Up}
+; del
+Capslock & x::SendInput {Blind}{Del Down}
+Capslock & x up::SendInput {Blind}{Del Up}
+Capslock & a::SendInput {Blind}{BS Down}
+Capslock & a up::SendInput {Blind}{BS Up}
 ; copy & paste
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; Caps Lock toggle
-^Capslock::Capslock
-
+^Esc::Capslock
++Esc::Capslock
 
 ; 去除复制来的内容里的回车
 !#c::
