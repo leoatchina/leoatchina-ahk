@@ -24,10 +24,6 @@ Capslock & Shift::SendInput {Blind}{Esc Down}
 Capslock & Shift up::SendInput {Blind}{Esc Up}
 Shift & Capslock::SendInput {Blind}{Esc Down}
 Shift & Capslock up::SendInput {Blind}{Esc Up}
-Capslock & Ctrl::SendInput {Blind}{Esc Down}
-Capslock & Ctrl up::SendInput {Blind}{Esc Up}
-Ctrl & Capslock::SendInput {Blind}{Esc Down}
-Ctrl & Capslock up::SendInput {Blind}{Esc Up}
 Capslock & Enter::SendInput {Blind}{Esc Down}
 Capslock & Enter up::SendInput {Blind}{Esc Up}
 ; del
@@ -39,8 +35,10 @@ Capslock & a up::SendInput {Blind}{BS Up}
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; Caps Lock toggle
-^Esc::Capslock
-+Esc::Capslock
+Capslock & Ctrl::SendInput {Blind}{Capslock Down}
+Capslock & Ctrl up::SendInput {Blind}{Capslock Up}
+Ctrl & Capslock::SendInput {Blind}{Capslock Down}
+Ctrl & Capslock up::SendInput {Blind}{Capslock Up}
 
 ; 去除复制来的内容里的回车
 !#c::
