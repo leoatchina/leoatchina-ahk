@@ -40,10 +40,20 @@ Capslock & Ctrl up::SendInput {Blind}{Capslock Up}
 Ctrl & Capslock::SendInput {Blind}{Capslock Down}
 Ctrl & Capslock up::SendInput {Blind}{Capslock Up}
 
-; 去除复制来的内容里的回车
+; 去除复制来的内容里的回车, 按win+alt+c, ! 是alt ,  # 是win
 !#c::
     tmp := RegExReplace(clipboard, "(\S.*?)\R(.*?\S)", "$1 $2")
     clipboard := tmp
     ; StringReplace clipboard, clipboard, % " ", % "", A
     clipwait 0.1
 return
+
+; proe 侧键作为中键
+#NoEnv
+#SingleInstance Force
+#InstallKeybdHook
+#InstallMouseHook
+#UseHook
+#IfWinActive ahk_exe xtop.exe
+	XButton1::MButton
+	XButton2::MButton
