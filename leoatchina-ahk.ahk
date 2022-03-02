@@ -40,6 +40,13 @@ Capslock & Ctrl up::SendInput {Blind}{Capslock Up}
 Ctrl & Capslock::SendInput {Blind}{Capslock Down}
 Ctrl & Capslock up::SendInput {Blind}{Capslock Up}
 
+; 先侧键再右键同时按作为中键
+; XButton1 & RButton::Send {Ctrl Down}{RButton Down}{Ctrl Up}{RButton Up}
+; XButton2 & RButton::Send {Ctrl Down}{RButton Down}{Ctrl Up}{RButton Up}
+; XButton1 & RButton up::SendInput {Blind}{MButton Up}
+XButton1 & RButton::SendInput {Blind}{MButton}
+XButton2 & RButton::SendInput {Blind}{MButton}
+
 ; 去除复制来的内容里的回车, 按win+alt+c, ! 是alt ,  # 是win
 !#c::
     tmp := RegExReplace(clipboard, "(\S.*?)\R(.*?\S)", "$1 $2")
