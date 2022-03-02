@@ -40,7 +40,7 @@ Capslock & Ctrl up::SendInput {Blind}{Capslock Up}
 Ctrl & Capslock::SendInput {Blind}{Capslock Down}
 Ctrl & Capslock up::SendInput {Blind}{Capslock Up}
 
-；XButton1是回退， XButton2是前进
+; XButton1是回退， XButton2是前进
 ; 先侧键再右键同时按作为中键
 XButton1 & RButton::SendInput {Blind}{MButton}
 ; 音量调节
