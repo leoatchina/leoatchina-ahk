@@ -44,10 +44,10 @@ Ctrl & Capslock up::SendInput {Blind}{Capslock Up}
 
 ; XButton1是回退， XButton2是前进
 ; 先侧键再右键同时按作为中键
-XButton1 & RButton::SendInput {Blind}{MButton}
+; XButton1 & RButton::SendInput {Blind}{MButton}
 ; 音量调节
-XButton1 & WheelUp::Send {Volume_Up}
-XButton1 & WheelDown::Send {Volume_Down}
+; XButton1 & WheelUp::Send {Volume_Up}
+; XButton1 & WheelDown::Send {Volume_Down}
 
 ; 去除复制来的内容里的回车, 按win+alt+c, ! 是alt ,  # 是win
 !#c::
