@@ -24,10 +24,6 @@ Capslock & Shift::SendInput {Blind}{Esc Down}
 Capslock & Shift up::SendInput {Blind}{Esc Up}
 Shift & Capslock::SendInput {Blind}{Esc Down}
 Shift & Capslock up::SendInput {Blind}{Esc Up}
-Capslock & Ctrl::SendInput {Blind}{Esc Down}
-Capslock & Ctrl up::SendInput {Blind}{Esc Up}
-Ctrl & Capslock::SendInput {Blind}{Esc Down}
-Ctrl & Capslock up::SendInput {Blind}{Esc Up}
 Capslock & Enter::SendInput {Blind}{Esc Down}
 Capslock & Enter up::SendInput {Blind}{Esc Up}
 Capslock & \::SendInput {Blind}{Esc Down}
@@ -41,13 +37,32 @@ Capslock & a up::SendInput {Blind}{BS Up}
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; Caps Lock toggle
-^Esc::Capslock
-+Esc::Capslock
+Capslock & Ctrl::SendInput {Blind}{Capslock Down}
+Capslock & Ctrl up::SendInput {Blind}{Capslock Up}
+Ctrl & Capslock::SendInput {Blind}{Capslock Down}
+Ctrl & Capslock up::SendInput {Blind}{Capslock Up}
 
-; 去除复制来的内容里的回车
+; XButton1是回退， XButton2是前进
+; 先侧键再右键同时按作为中键
+XButton1 & RButton::SendInput {Blind}{MButton}
+; 音量调节
+XButton1 & WheelUp::Send {Volume_Up}
+XButton1 & WheelDown::Send {Volume_Down}
+
+; 去除复制来的内容里的回车, 按win+alt+c, ! 是alt ,  # 是win
 !#c::
     tmp := RegExReplace(clipboard, "(\S.*?)\R(.*?\S)", "$1 $2")
     clipboard := tmp
     ; StringReplace clipboard, clipboard, % " ", % "", A
     clipwait 0.1
 return
+
+; proe 两侧键作为中键
+#NoEnv
+#SingleInstance Force
+#InstallKeybdHook
+#InstallMouseHook
+#UseHook
+#IfWinActive ahk_exe xtop.exe
+	XButton1::MButton
+	XButton2::MButton
