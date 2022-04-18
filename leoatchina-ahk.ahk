@@ -1,23 +1,7 @@
-; XButton1是回退， XButton2是前进
-; 先侧键再右键同时按作为中键
-; XButton1 & RButton::SendInput {Blind}{MButton Down}
-; XButton1 & RButton up::SendInput {Blind}{MButton Up}
-; RButton & XButton1::MButton
-
-; 音量调节
-; XButton1 & WheelUp::Send {Volume_Up}
-; XButton1 & WheelDown::Send {Volume_Down}
-
-; 先侧键再右键同时按作为中键
-; XButton1 & RButton::SendInput {Blind}{MButton}
-; 音量调节
-; XButton1 & WheelUp::Send {Volume_Up}
-; XButton1 & WheelDown::Send {Volume_Down}
-
 #Persistent
 SetCapsLockState, AlwaysOff
 ; ----------------
-; Ime
+; Input method control
 ; ----------------
 Capslock & o::Send {Ctrl down}{Shift}{Ctrl up}
 ; ctrl+' invoke sogoupinyin
@@ -32,8 +16,9 @@ Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; ----------------
 ; Volume control 
 ; ----------------
-; Capslock & m::Send {Blind}{Enter Down}
-; Capslock & m up::Send {Blind}{Enter Up}
+Capslock & m::Send {Mute}
+Capslock & ]::Send {Volume_Up}
+Capslock & [::Send {Volume_Down}
 ; ----------------
 ; Left, Down, Up, Right
 ; ----------------
