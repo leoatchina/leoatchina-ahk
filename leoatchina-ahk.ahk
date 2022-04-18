@@ -11,13 +11,13 @@
 #Persistent
 SetCapsLockState, AlwaysOff
 ; Capslock + hjkl (left, down, up, right)
-Capslock & h::Send {Blind}{Left DownTemp}
+Capslock & h::Send {Blind}{Left Down}
 Capslock & h up::Send {Blind}{Left Up}
-Capslock & j::Send {Blind}{Down DownTemp}
+Capslock & j::Send {Blind}{Down Down}
 Capslock & j up::Send {Blind}{Down Up}
-Capslock & k::Send {Blind}{Up DownTemp}
+Capslock & k::Send {Blind}{Up Down}
 Capslock & k up::Send {Blind}{Up Up}
-Capslock & l::Send {Blind}{Right DownTemp}
+Capslock & l::Send {Blind}{Right Down}
 Capslock & l up::Send {Blind}{Right Up}
 ; Home End
 Capslock & b::SendInput {Blind}{Home Down}
@@ -36,11 +36,13 @@ Shift & Capslock::SendInput {Blind}{Esc Down}
 Shift & Capslock up::SendInput {Blind}{Esc Up}
 Capslock & Enter::SendInput {Blind}{Esc Down}
 Capslock & Enter up::SendInput {Blind}{Esc Up}
-; del
+Capslock & \::SendInput {Blind}{Esc Down}
+Capslock & \ up::SendInput {Blind}{Esc Up}
+; del BS
 Capslock & x::SendInput {Blind}{Del Down}
 Capslock & x up::SendInput {Blind}{Del Up}
-Capslock & a::SendInput {Blind}{BS Down}
-Capslock & a up::SendInput {Blind}{BS Up}
+Capslock & BS::SendInput {Blind}{Del Down}
+Capslock & BS up::SendInput {Blind}{Del Up}
 ; copy & paste
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
@@ -50,7 +52,19 @@ Capslock & Ctrl up::SendInput {Blind}{Capslock Up}
 Ctrl & Capslock::SendInput {Blind}{Capslock Down}
 Ctrl & Capslock up::SendInput {Blind}{Capslock Up}
 
+; Shift & Esc::SendInput {Blind}{Shift & ~ Down}
+; Shift & Esc up::SendInput {Blind}{Shift & ~ Up}
+; Esc & Shift::SendInput {Blind}{Shift & ~ Down}
+; Esc & Shift up::SendInput {Blind}{Shift & ~ Up}
 
+; Esc::SendInput {Blind}{~ Down}
+; Esc up::SendInput {Blind}{~ Up}
+; xbUTTON1是回退， XButton2是前进
+; 先侧键再右键同时按作为中键
+; XButton1 & RButton::SendInput {Blind}{MButton}
+; 音量调节
+; XButton1 & WheelUp::Send {Volume_Up}
+; XButton1 & WheelDown::Send {Volume_Down}
 
 ; 去除复制来的内容里的回车, 按win+alt+c, ! 是alt ,  # 是win
 !#c::
