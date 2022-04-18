@@ -38,28 +38,21 @@ Capslock & d up::SendInput {Blind}{PgDn Up}
 ; Esc
 Capslock & Tab::SendInput {Blind}{Esc Down}
 Capslock & Tab up::SendInput {Blind}{Esc Up}
+Capslock & Esc::SendInput {Blind}{Esc Down}
+Capslock & Esc up::SendInput {Blind}{Esc Up}
 Capslock & Enter::SendInput {Blind}{Esc Down}
 Capslock & Enter up::SendInput {Blind}{Esc Up}
-Capslock & \::SendInput {Blind}{Esc Down}
-Capslock & \ up::SendInput {Blind}{Esc Up}
-; del BS
+; Del BS
 Capslock & x::SendInput {Blind}{Del Down}
 Capslock & x up::SendInput {Blind}{Del Up}
 Capslock & BS::SendInput {Blind}{Del Down}
 Capslock & BS up::SendInput {Blind}{Del Up}
-; copy & paste
+; Copy & paste
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; Caps Lock toggle
 Capslock & RCtrl::SendInput {Blind}{Capslock Down}
 Capslock & RCtrl up::SendInput {Blind}{Capslock Up}
-RCtrl & Capslock::SendInput {Blind}{Capslock Down}
-RCtrl & Capslock up::SendInput {Blind}{Capslock Up}
-; ime toggle
-; Capslock & LCtrl::SendInput {Blind}{Capslock Down}
-; Capslock & LCtrl up::SendInput {Blind}{Capslock Up}
-; LCtrl & Capslock::SendInput {Blind}{Capslock Down}
-; LCtrl & Capslock up::SendInput {Blind}{Capslock Up}
 
 ; Fn
 Capslock & 1::SendInput    {Blind}{F1 Down}
