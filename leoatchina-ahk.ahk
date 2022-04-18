@@ -76,6 +76,11 @@ Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 Capslock & u::SendInput {Blind}{Capslock Down}
 Capslock & u up::SendInput {Blind}{Capslock Up}
 ; ----------------
+; Insert
+; ----------------
+Capslock & \::SendInput {Blind}{Insert Down}
+Capslock & \ up::SendInput {Blind}{Insert Up}
+; ----------------
 ; Fn
 ; ----------------
 Capslock & 1::SendInput    {Blind}{F1 Down}
