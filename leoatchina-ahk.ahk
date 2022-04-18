@@ -80,8 +80,8 @@ Capslock & u up::SendInput {Blind}{Capslock Up}
 ; ----------------
 ; Insert
 ; ----------------
-Capslock & \::SendInput {Blind}{Insert Down}
-Capslock & \ up::SendInput {Blind}{Insert Up}
+Capslock & i::SendInput {Blind}{Insert Down}
+Capslock & i up::SendInput {Blind}{Insert Up}
 ; ----------------
 ; Fn
 ; ----------------
