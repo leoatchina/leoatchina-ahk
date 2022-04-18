@@ -2,4 +2,4 @@
 
 my ahk config
 
-caplocks work as ctrl when pressed with other keys, while esc when pressed only
+Caplocks work as a FN key, combine with other keys to work as some special keys.
