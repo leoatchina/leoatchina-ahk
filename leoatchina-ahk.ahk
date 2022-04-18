@@ -16,7 +16,7 @@
 
 #Persistent
 SetCapsLockState, AlwaysOff
-; Capslock + hjkl (left, down, up, right)
+; left, down, up, right
 Capslock & h::Send {Blind}{Left Down}
 Capslock & h up::Send {Blind}{Left Up}
 Capslock & j::Send {Blind}{Down Down}
@@ -51,8 +51,8 @@ Capslock & BS up::SendInput {Blind}{Del Up}
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; Caps Lock toggle
-Capslock & RCtrl::SendInput {Blind}{Capslock Down}
-Capslock & RCtrl up::SendInput {Blind}{Capslock Up}
+Capslock & \::SendInput {Blind}{Capslock Down}
+Capslock & \ up::SendInput {Blind}{Capslock Up}
 
 ; Fn
 Capslock & 1::SendInput    {Blind}{F1 Down}
@@ -92,7 +92,7 @@ Capslock & =::SendInput    {Blind}{F12 Down}
 Capslock & = up::SendInput {Blind}{F12 Up}
 
 ; 去除复制来的内容里的回车, 按win+alt+c, ! 是alt ,  # 是win
-!#c::
+#!c::
     tmp := RegExReplace(clipboard, "(\S.*?)\R(.*?\S)", "$1 $2")
     clipboard := tmp
     ; StringReplace clipboard, clipboard, % " ", % "", A
