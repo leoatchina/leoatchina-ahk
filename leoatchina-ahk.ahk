@@ -22,6 +22,11 @@ SetCapsLockState, AlwaysOff
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; ----------------
+; Enter 
+; ----------------
+Capslock & m::Send {Blind}{Enter Down}
+Capslock & m up::Send {Blind}{Enter Up}
+; ----------------
 ; Left, Down, Up, Right
 ; ----------------
 Capslock & h::Send {Blind}{Left Down}
@@ -66,8 +71,10 @@ Capslock & Esc up::SendInput {Blind}{Esc Up}
 Capslock & Enter::SendInput {Blind}{Esc Down}
 Capslock & Enter up::SendInput {Blind}{Esc Up}
 ; ----------------
-; Del
+; BS Del
 ; ----------------
+Capslock & z::SendInput {Blind}{BS Down}
+Capslock & z up::SendInput {Blind}{BS Up}
 Capslock & x::SendInput {Blind}{Del Down}
 Capslock & x up::SendInput {Blind}{Del Up}
 Capslock & BS::SendInput {Blind}{Del Down}
