@@ -43,17 +43,17 @@ Capslock & d up::Send {Blind}{Right Up}
 ; ----------------
 ; Home End
 ; ----------------
-Capslock & [::SendInput {Blind}{Home Down}
-Capslock & [ up::SendInput {Blind}{Home Up}
-Capslock & ]::SendInput {Blind}{End Down}
-Capslock & ] up::SendInput {Blind}{End Up}
+Capslock & b::SendInput {Blind}{Home Down}
+Capslock & b up::SendInput {Blind}{Home Up}
+Capslock & f::SendInput {Blind}{End Down}
+Capslock & f up::SendInput {Blind}{End Up}
 ; ----------------
 ; PgUp PgDn
 ; ----------------
-Capslock & b::SendInput {Blind}{PgUp Down}
-Capslock & b up::SendInput {Blind}{PgUp Up}
-Capslock & f::SendInput {Blind}{PgDn Down}
-Capslock & f up::SendInput {Blind}{PgDn Up}
+Capslock & p::SendInput {Blind}{PgUp Down}
+Capslock & p up::SendInput {Blind}{PgUp Up}
+Capslock & n::SendInput {Blind}{PgDn Down}
+Capslock & n up::SendInput {Blind}{PgDn Up}
 ; ----------------
 ; Esc
 ; ----------------
