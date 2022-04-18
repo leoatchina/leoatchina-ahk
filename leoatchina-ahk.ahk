@@ -1,3 +1,13 @@
+; XButton1是回退， XButton2是前进
+; 先侧键再右键同时按作为中键
+; XButton1 & RButton::SendInput {Blind}{MButton Down}
+; XButton1 & RButton up::SendInput {Blind}{MButton Up}
+; RButton & XButton1::MButton
+
+; 音量调节
+; XButton1 & WheelUp::Send {Volume_Up}
+; XButton1 & WheelDown::Send {Volume_Down}
+
 #Persistent
 SetCapsLockState, AlwaysOff
 ; Capslock + hjkl (left, down, up, right)
@@ -40,12 +50,7 @@ Capslock & Ctrl up::SendInput {Blind}{Capslock Up}
 Ctrl & Capslock::SendInput {Blind}{Capslock Down}
 Ctrl & Capslock up::SendInput {Blind}{Capslock Up}
 
-; XButton1是回退， XButton2是前进
-; 先侧键再右键同时按作为中键
-XButton1 & RButton::SendInput {Blind}{MButton}
-; 音量调节
-XButton1 & WheelUp::Send {Volume_Up}
-XButton1 & WheelDown::Send {Volume_Down}
+
 
 ; 去除复制来的内容里的回车, 按win+alt+c, ! 是alt ,  # 是win
 !#c::
