@@ -17,12 +17,20 @@
 #Persistent
 SetCapsLockState, AlwaysOff
 ; ----------------
+; Ime
+; ----------------
+Capslock & o::Send {Ctrl down}{Shift}{Ctrl up}
+; ctrl+' invoke sogoupinyin
+Capslock & y::Send,^,
+; ctrl+, invoke sogouwubi
+Capslock & g::Send,^'
+; ----------------
 ; Copy & paste
 ; ----------------
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; ----------------
-; Enter 
+; Enter
 ; ----------------
 Capslock & m::Send {Blind}{Enter Down}
 Capslock & m up::Send {Blind}{Enter Up}
