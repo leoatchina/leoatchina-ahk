@@ -30,10 +30,10 @@ Capslock & g::Send,^'
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; ----------------
-; Enter
+; Volume control 
 ; ----------------
-Capslock & m::Send {Blind}{Enter Down}
-Capslock & m up::Send {Blind}{Enter Up}
+; Capslock & m::Send {Blind}{Enter Down}
+; Capslock & m up::Send {Blind}{Enter Up}
 ; ----------------
 ; Left, Down, Up, Right
 ; ----------------
@@ -70,14 +70,10 @@ Capslock & n up::SendInput {Blind}{PgDn Up}
 ; ----------------
 ; Esc
 ; ----------------
-Capslock & `::SendInput {Blind}{Esc Down}
-Capslock & ` up::SendInput {Blind}{Esc Up}
 Capslock & q::SendInput {Blind}{Esc Down}
 Capslock & q up::SendInput {Blind}{Esc Up}
 Capslock & Tab::SendInput {Blind}{Esc Down}
 Capslock & Tab up::SendInput {Blind}{Esc Up}
-Capslock & Esc::SendInput {Blind}{Esc Down}
-Capslock & Esc up::SendInput {Blind}{Esc Up}
 Capslock & Enter::SendInput {Blind}{Esc Down}
 Capslock & Enter up::SendInput {Blind}{Esc Up}
 ; ----------------
@@ -90,7 +86,7 @@ Capslock & x up::SendInput {Blind}{Del Up}
 Capslock & BS::SendInput {Blind}{Del Down}
 Capslock & BS up::SendInput {Blind}{Del Up}
 ; ----------------
-; Caps Lock toggle
+; Capslock toggle
 ; ----------------
 Capslock & u::SendInput {Blind}{Capslock Down}
 Capslock & u up::SendInput {Blind}{Capslock Up}
