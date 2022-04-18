@@ -17,7 +17,12 @@
 #Persistent
 SetCapsLockState, AlwaysOff
 ; ----------------
-; left, down, up, right
+; Copy & paste
+; ----------------
+Capslock & v::Send {Shift down}{Ins}{Shift up}
+Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
+; ----------------
+; Left, Down, Up, Right
 ; ----------------
 Capslock & h::Send {Blind}{Left Down}
 Capslock & h up::Send {Blind}{Left Up}
@@ -52,6 +57,8 @@ Capslock & f up::SendInput {Blind}{PgDn Up}
 ; ----------------
 ; Esc
 ; ----------------
+Capslock & `::SendInput {Blind}{Esc Down}
+Capslock & ` up::SendInput {Blind}{Esc Up}
 Capslock & Tab::SendInput {Blind}{Esc Down}
 Capslock & Tab up::SendInput {Blind}{Esc Up}
 Capslock & Esc::SendInput {Blind}{Esc Down}
@@ -59,17 +66,12 @@ Capslock & Esc up::SendInput {Blind}{Esc Up}
 Capslock & Enter::SendInput {Blind}{Esc Down}
 Capslock & Enter up::SendInput {Blind}{Esc Up}
 ; ----------------
-; Del BS
+; Del
 ; ----------------
 Capslock & x::SendInput {Blind}{Del Down}
 Capslock & x up::SendInput {Blind}{Del Up}
 Capslock & BS::SendInput {Blind}{Del Down}
 Capslock & BS up::SendInput {Blind}{Del Up}
-; ----------------
-; Copy & paste
-; ----------------
-Capslock & v::Send {Shift down}{Ins}{Shift up}
-Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; ----------------
 ; Caps Lock toggle
 ; ----------------
