@@ -64,6 +64,8 @@ Capslock & n up::SendInput {Blind}{PgDn Up}
 ; ----------------
 Capslock & `::SendInput {Blind}{Esc Down}
 Capslock & ` up::SendInput {Blind}{Esc Up}
+Capslock & q::SendInput {Blind}{Esc Down}
+Capslock & q up::SendInput {Blind}{Esc Up}
 Capslock & Tab::SendInput {Blind}{Esc Down}
 Capslock & Tab up::SendInput {Blind}{Esc Up}
 Capslock & Esc::SendInput {Blind}{Esc Down}
