@@ -26,10 +26,10 @@ Capslock & k up::Send {Blind}{Up Up}
 Capslock & l::Send {Blind}{Right Down}
 Capslock & l up::Send {Blind}{Right Up}
 ; Home End
-Capslock & b::SendInput {Blind}{Home Down}
-Capslock & b up::SendInput {Blind}{Home Up}
-Capslock & f::SendInput {Blind}{End Down}
-Capslock & f up::SendInput {Blind}{End Up}
+Capslock & a::SendInput {Blind}{Home Down}
+Capslock & a up::SendInput {Blind}{Home Up}
+Capslock & e::SendInput {Blind}{End Down}
+Capslock & e up::SendInput {Blind}{End Up}
 ; PgUp PgDn
 Capslock & u::SendInput {Blind}{PgUp Down}
 Capslock & u up::SendInput {Blind}{PgUp Up}
