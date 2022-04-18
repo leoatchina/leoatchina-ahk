@@ -102,16 +102,18 @@ Capslock & -::SendInput    {Blind}{F11 Down}
 Capslock & - up::SendInput {Blind}{F11 Up}
 Capslock & =::SendInput    {Blind}{F12 Down}
 Capslock & = up::SendInput {Blind}{F12 Up}
-
+; ----------------
 ; 去除复制来的内容里的回车, 按win+alt+c,  # 是win, ! 是alt
+; ----------------
 #!c::
     tmp := RegExReplace(clipboard, "(\S.*?)\R(.*?\S)", "$1 $2")
     clipboard := tmp
     ; StringReplace clipboard, clipboard, % " ", % "", A
     clipwait 0.1
 return
-
-; proe 两侧键作为中键
+; ----------------
+; NOTE: For proe 两侧键作为中键
+; ----------------
 #NoEnv
 #SingleInstance Force
 #InstallKeybdHook
