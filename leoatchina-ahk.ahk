@@ -47,11 +47,47 @@ Capslock & BS up::SendInput {Blind}{Del Up}
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; Caps Lock toggle
-Capslock & Ctrl::SendInput {Blind}{Capslock Down}
-Capslock & Ctrl up::SendInput {Blind}{Capslock Up}
-Ctrl & Capslock::SendInput {Blind}{Capslock Down}
-Ctrl & Capslock up::SendInput {Blind}{Capslock Up}
+Capslock & RCtrl::SendInput {Blind}{Capslock Down}
+Capslock & RCtrl up::SendInput {Blind}{Capslock Up}
+RCtrl & Capslock::SendInput {Blind}{Capslock Down}
+RCtrl & Capslock up::SendInput {Blind}{Capslock Up}
 
+; Fn
+Capslock & 1::SendInput    {Blind}{F1 Down}
+Capslock & 1 up::SendInput {Blind}{F1 Up}
+
+Capslock & 2::SendInput    {Blind}{F2 Down}
+Capslock & 2 up::SendInput {Blind}{F2 Up}
+
+Capslock & 3::SendInput    {Blind}{F3 Down}
+Capslock & 3 up::SendInput {Blind}{F3 Up}
+
+Capslock & 4::SendInput    {Blind}{F4 Down}
+Capslock & 4 up::SendInput {Blind}{F4 Up}
+
+Capslock & 5::SendInput    {Blind}{F5 Down}
+Capslock & 5 up::SendInput {Blind}{F5 Up}
+
+Capslock & 6::SendInput    {Blind}{F6 Down}
+Capslock & 6 up::SendInput {Blind}{F6 Up}
+
+Capslock & 7::SendInput    {Blind}{F7 Down}
+Capslock & 7 up::SendInput {Blind}{F7 Up}
+
+Capslock & 8::SendInput    {Blind}{F8 Down}
+Capslock & 8 up::SendInput {Blind}{F8 Up}
+
+Capslock & 9::SendInput    {Blind}{F9 Down}
+Capslock & 9 up::SendInput {Blind}{F9 Up}
+
+Capslock & 0::SendInput    {Blind}{F10 Down}
+Capslock & 0 up::SendInput {Blind}{F10 Up}
+
+Capslock & -::SendInput    {Blind}{F11 Down}
+Capslock & - up::SendInput {Blind}{F11 Up}
+
+Capslock & =::SendInput    {Blind}{F12 Down}
+Capslock & = up::SendInput {Blind}{F12 Up}
 ; Shift & Esc::SendInput {Blind}{Shift & ~ Down}
 ; Shift & Esc up::SendInput {Blind}{Shift & ~ Up}
 ; Esc & Shift::SendInput {Blind}{Shift & ~ Down}
