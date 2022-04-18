@@ -36,10 +36,8 @@ Capslock & u up::SendInput {Blind}{PgUp Up}
 Capslock & d::SendInput {Blind}{PgDn Down}
 Capslock & d up::SendInput {Blind}{PgDn Up}
 ; Esc
-Capslock & Shift::SendInput {Blind}{Esc Down}
-Capslock & Shift up::SendInput {Blind}{Esc Up}
-Shift & Capslock::SendInput {Blind}{Esc Down}
-Shift & Capslock up::SendInput {Blind}{Esc Up}
+Capslock & Tab::SendInput {Blind}{Esc Down}
+Capslock & Tab up::SendInput {Blind}{Esc Up}
 Capslock & Enter::SendInput {Blind}{Esc Down}
 Capslock & Enter up::SendInput {Blind}{Esc Up}
 Capslock & \::SendInput {Blind}{Esc Down}
@@ -57,6 +55,11 @@ Capslock & RCtrl::SendInput {Blind}{Capslock Down}
 Capslock & RCtrl up::SendInput {Blind}{Capslock Up}
 RCtrl & Capslock::SendInput {Blind}{Capslock Down}
 RCtrl & Capslock up::SendInput {Blind}{Capslock Up}
+; ime toggle
+; Capslock & LCtrl::SendInput {Blind}{Capslock Down}
+; Capslock & LCtrl up::SendInput {Blind}{Capslock Up}
+; LCtrl & Capslock::SendInput {Blind}{Capslock Down}
+; LCtrl & Capslock up::SendInput {Blind}{Capslock Up}
 
 ; Fn
 Capslock & 1::SendInput    {Blind}{F1 Down}
