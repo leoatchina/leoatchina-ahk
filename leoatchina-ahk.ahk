@@ -3,7 +3,11 @@ SetCapsLockState, AlwaysOff
 ; ----------------
 ; Explorer 
 ; ----------------
-Capslock & e::Run explorer.exe
+Capslock & o::Run explorer.exe
+; ----------------
+; Ctrl-z 
+; ----------------
+Capslock & z::^z
 ; ----------------
 ; Input method control
 ; ----------------
@@ -14,8 +18,8 @@ SetInputLang(Lang)
     ControlGetFocus, CtrlInFocus
     PostMessage, 0x50, 0, % Lang, %CtrlInFocus%
 }
-Capslock & y::SetInputLang(0x0409) ; English
-Capslock & o::^' ; NOTE:   ctrl + ' is used to invoke sogouwubi
+Capslock & e::SetInputLang(0x0409) ; English
+Capslock & y::^' ; NOTE:   ctrl + ' is used to invoke sogouwubi
 Capslock & space::#space ; toggle input method
 ; ----------------
 ; MicrosoftTODO
@@ -89,8 +93,8 @@ Capslock & Enter up::SendInput {Blind}{Esc Up}
 ; ----------------
 ; BS Del
 ; ----------------
-Capslock & z::SendInput {Blind}{BS DownTemp}
-Capslock & z up::SendInput {Blind}{BS Up}
+Capslock & u::SendInput {Blind}{BS DownTemp}
+Capslock & u up::SendInput {Blind}{BS Up}
 Capslock & x::SendInput {Blind}{Del DownTemp}
 Capslock & x up::SendInput {Blind}{Del Up}
 Capslock & BS::SendInput {Blind}{Del DownTemp}
@@ -98,8 +102,8 @@ Capslock & BS up::SendInput {Blind}{Del Up}
 ; ----------------
 ; Capslock toggle
 ; ----------------
-Capslock & u::SendInput {Blind}{Capslock DownTemp}
-Capslock & u up::SendInput {Blind}{Capslock Up}
+Capslock & \::SendInput {Blind}{Capslock DownTemp}
+Capslock & \ up::SendInput {Blind}{Capslock Up}
 ; ----------------
 ; Insert
 ; ----------------
