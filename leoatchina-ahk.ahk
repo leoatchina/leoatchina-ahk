@@ -3,9 +3,16 @@ SetCapsLockState, AlwaysOff
 ; ----------------
 ; Input method control
 ; ----------------
-Capslock & o::Send {Ctrl down}{Shift}{Ctrl up}
-; ctrl+, invoke sogouwubi
-Capslock & y::Send,^'
+; https://r.nf/smbrx4 
+SetInputLang(Lang)
+{
+    WinExist("A")
+    ControlGetFocus, CtrlInFocus
+    PostMessage, 0x50, 0, % Lang, %CtrlInFocus%
+}
+Capslock & y::SetInputLang(0x0409) ; English
+Capslock & o::^' ; Chinese sogouwubi
+Capslock & space::Send,#{space} ; toggle between input method
 ; ----------------
 ; Copy & paste
 ; ----------------
