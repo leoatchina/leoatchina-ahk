@@ -13,7 +13,7 @@ SetInputLang(Lang)
 Capslock & space::SetInputLang(0x0409) ; English
 Capslock & y::^' ; NOTE:"ctrl + '" is ocupied to invoke sogouwubi
 ; ----------------
-; MicrosoftTODO 
+; MicrosoftTODO
 ; ----------------
 Capslock & o::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
 ; ----------------
