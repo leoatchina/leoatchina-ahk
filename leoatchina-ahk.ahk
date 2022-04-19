@@ -10,9 +10,12 @@ SetInputLang(Lang)
     ControlGetFocus, CtrlInFocus
     PostMessage, 0x50, 0, % Lang, %CtrlInFocus%
 }
-Capslock & y::SetInputLang(0x0409) ; English
-Capslock & o::^' ; Chinese sogouwubi inpu method, befaulty configured in sogouwubi
-Capslock & space::Send,#{space} ; toggle between input method
+Capslock & space::SetInputLang(0x0409) ; English
+Capslock & y::^' ; NOTE:"ctrl + '" is ocupied to invoke sogouwubi
+; ----------------
+; MicrosoftTODO 
+; ----------------
+Capslock & o::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
 ; ----------------
 ; Copy & paste
 ; ----------------
