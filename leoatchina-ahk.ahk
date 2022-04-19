@@ -4,10 +4,8 @@ SetCapsLockState, AlwaysOff
 ; Input method control
 ; ----------------
 Capslock & o::Send {Ctrl down}{Shift}{Ctrl up}
-; ctrl+' invoke sogoupinyin
-Capslock & y::Send,^,
 ; ctrl+, invoke sogouwubi
-Capslock & g::Send,^'
+Capslock & y::Send,^'
 ; ----------------
 ; Copy & paste
 ; ----------------
@@ -16,15 +14,19 @@ Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; ----------------
 ; Top
 ; ----------------
-Capslock & t::Send,#+!t
+Capslock & t::Send, #+!t
 ; ----------------
-; Run
+; Run taskmrg
 ; ----------------
-Capslock & r::Send,#s
+Capslock & g::Run, C:\Windows\system32\taskmgr.exe
 ; ----------------
-; Volume control 
+; Reload ahk scripts 
 ; ----------------
-Capslock & m::Send {Mute}
+Capslock & r::Reload
+; ----------------
+; Volume control
+; ----------------
+Capslock & m::Send {Volume_Mute}
 Capslock & ]::Send {Volume_Up}
 Capslock & [::Send {Volume_Down}
 ; ----------------
