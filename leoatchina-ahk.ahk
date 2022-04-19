@@ -30,6 +30,14 @@ Capslock & g::Send,^'
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; ----------------
+; Top
+; ----------------
+Capslock & t::Send,#+!t
+; ----------------
+; Run
+; ----------------
+Capslock & r::Send,#s
+; ----------------
 ; Enter
 ; ----------------
 Capslock & m::Send {Blind}{Enter Down}
