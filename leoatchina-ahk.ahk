@@ -1,23 +1,7 @@
-; XButton1是回退， XButton2是前进
-; 先侧键再右键同时按作为中键
-; XButton1 & RButton::SendInput {Blind}{MButton Down}
-; XButton1 & RButton up::SendInput {Blind}{MButton Up}
-; RButton & XButton1::MButton
-
-; 音量调节
-; XButton1 & WheelUp::Send {Volume_Up}
-; XButton1 & WheelDown::Send {Volume_Down}
-
-; 先侧键再右键同时按作为中键
-; XButton1 & RButton::SendInput {Blind}{MButton}
-; 音量调节
-; XButton1 & WheelUp::Send {Volume_Up}
-; XButton1 & WheelDown::Send {Volume_Down}
-
 #Persistent
 SetCapsLockState, AlwaysOff
 ; ----------------
-; Ime
+; Input method control
 ; ----------------
 Capslock & o::Send {Ctrl down}{Shift}{Ctrl up}
 ; ctrl+' invoke sogoupinyin
@@ -38,10 +22,11 @@ Capslock & t::Send,#+!t
 ; ----------------
 Capslock & r::Send,#s
 ; ----------------
-; Enter
+; Volume control 
 ; ----------------
-Capslock & m::Send {Blind}{Enter Down}
-Capslock & m up::Send {Blind}{Enter Up}
+Capslock & m::Send {Mute}
+Capslock & ]::Send {Volume_Up}
+Capslock & [::Send {Volume_Down}
 ; ----------------
 ; Left, Down, Up, Right
 ; ----------------
@@ -78,14 +63,10 @@ Capslock & n up::SendInput {Blind}{PgDn Up}
 ; ----------------
 ; Esc
 ; ----------------
-Capslock & `::SendInput {Blind}{Esc Down}
-Capslock & ` up::SendInput {Blind}{Esc Up}
 Capslock & q::SendInput {Blind}{Esc Down}
 Capslock & q up::SendInput {Blind}{Esc Up}
 Capslock & Tab::SendInput {Blind}{Esc Down}
 Capslock & Tab up::SendInput {Blind}{Esc Up}
-Capslock & Esc::SendInput {Blind}{Esc Down}
-Capslock & Esc up::SendInput {Blind}{Esc Up}
 Capslock & Enter::SendInput {Blind}{Esc Down}
 Capslock & Enter up::SendInput {Blind}{Esc Up}
 ; ----------------
@@ -98,7 +79,7 @@ Capslock & x up::SendInput {Blind}{Del Up}
 Capslock & BS::SendInput {Blind}{Del Down}
 Capslock & BS up::SendInput {Blind}{Del Up}
 ; ----------------
-; Caps Lock toggle
+; Capslock toggle
 ; ----------------
 Capslock & u::SendInput {Blind}{Capslock Down}
 Capslock & u up::SendInput {Blind}{Capslock Up}
