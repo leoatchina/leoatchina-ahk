@@ -3,7 +3,7 @@ SetCapsLockState, AlwaysOff
 ; ----------------
 ; Input method control
 ; ----------------
-; https://r.nf/smbrx4
+; NOTE:https://r.nf/smbrx4
 SetInputLang(Lang)
 {
     WinExist("A")
