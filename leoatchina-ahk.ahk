@@ -10,8 +10,9 @@ SetInputLang(Lang)
     ControlGetFocus, CtrlInFocus
     PostMessage, 0x50, 0, % Lang, %CtrlInFocus%
 }
-Capslock & space::SetInputLang(0x0409) ; English
+Capslock & e::SetInputLang(0x0409) ; English
 Capslock & y::^' ; NOTE:"ctrl + '" is ocupied to invoke sogouwubi
+Capslock & space::#space ; NOTE:"ctrl + '" is ocupied to invoke sogouwubi
 ; ----------------
 ; MicrosoftTODO
 ; ----------------
@@ -75,8 +76,8 @@ Capslock & n up::SendInput {Blind}{PgDn Up}
 ; ----------------
 ; Esc
 ; ----------------
-Capslock & q::SendInput {Blind}{Esc DownTemp}
-Capslock & q up::SendInput {Blind}{Esc Up}
+Capslock & `::SendInput {Blind}{Esc DownTemp}
+Capslock & ` up::SendInput {Blind}{Esc Up}
 Capslock & Tab::SendInput {Blind}{Esc DownTemp}
 Capslock & Tab up::SendInput {Blind}{Esc Up}
 Capslock & Enter::SendInput {Blind}{Esc DownTemp}
