@@ -1,26 +1,26 @@
 #Persistent
 SetCapsLockState, AlwaysOff
 ; ----------------
+; Explorer 
+; ----------------
+Capslock & e::Run explorer.exe
+; ----------------
 ; Input method control
 ; ----------------
-; NOTE:https://r.nf/smbrx4
+; XXX: https://r.nf/smbrx4
 SetInputLang(Lang)
 {
     WinExist("A")
     ControlGetFocus, CtrlInFocus
     PostMessage, 0x50, 0, % Lang, %CtrlInFocus%
 }
-Capslock & e::SetInputLang(0x0409) ; English
-Capslock & y::^' ; NOTE:"ctrl + '" is ocupied to invoke sogouwubi
+Capslock & y::SetInputLang(0x0409) ; English
+Capslock & o::^' ; NOTE:   ctrl + ' is used to invoke sogouwubi
 Capslock & space::#space ; toggle input method
 ; ----------------
 ; MicrosoftTODO
 ; ----------------
-Capslock & q::RUN,shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
-; ----------------
-; obsidian
-; ----------------
-Capslock & o::RUN "C:\Users\Taotao\AppData\Local\Obsidian\Obsidian.exe"
+Capslock & q::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
 ; ----------------
 ; Copy & paste
 ; ----------------
