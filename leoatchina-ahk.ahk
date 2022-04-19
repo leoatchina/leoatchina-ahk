@@ -12,18 +12,22 @@ SetInputLang(Lang)
 }
 Capslock & e::SetInputLang(0x0409) ; English
 Capslock & y::^' ; NOTE:"ctrl + '" is ocupied to invoke sogouwubi
-Capslock & space::#space ; NOTE:"ctrl + '" is ocupied to invoke sogouwubi
+Capslock & space::#space ; toggle input method
 ; ----------------
 ; MicrosoftTODO
 ; ----------------
-Capslock & o::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
+Capslock & q::RUN,shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
+; ----------------
+; obsidian
+; ----------------
+Capslock & o::RUN "C:\Users\Taotao\AppData\Local\Obsidian\Obsidian.exe"
 ; ----------------
 ; Copy & paste
 ; ----------------
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; ----------------
-; Top
+; Top of all
 ; ----------------
 Capslock & t::Send, #+!t
 ; ----------------
