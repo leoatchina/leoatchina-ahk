@@ -88,6 +88,8 @@ Capslock & `::SendInput {Blind}{Esc DownTemp}
 Capslock & ` up::SendInput {Blind}{Esc Up}
 Capslock & Tab::SendInput {Blind}{Esc DownTemp}
 Capslock & Tab up::SendInput {Blind}{Esc Up}
+Capslock & Esc::SendInput {Blind}{Esc DownTemp}
+Capslock & Esc up::SendInput {Blind}{Esc Up}
 Capslock & Enter::SendInput {Blind}{Esc DownTemp}
 Capslock & Enter up::SendInput {Blind}{Esc Up}
 ; ----------------
