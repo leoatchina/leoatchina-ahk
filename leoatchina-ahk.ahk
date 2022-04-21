@@ -1,13 +1,9 @@
 #Persistent
 SetCapsLockState, AlwaysOff
 ; ----------------
-; Explorer 
+; Explorer
 ; ----------------
 Capslock & o::Run explorer.exe
-; ----------------
-; Ctrl-z 
-; ----------------
-Capslock & z::^z
 ; ----------------
 ; Input method control
 ; ----------------
@@ -19,7 +15,7 @@ SetInputLang(Lang)
     PostMessage, 0x50, 0, % Lang, %CtrlInFocus%
 }
 Capslock & u::SetInputLang(0x0409) ; English
-Capslock & y::^' ; NOTE:   ctrl + ' is used to invoke sogouwubi
+Capslock & y::^' ; NOTE:ctrl + ' is used to invoke sogouwubi
 Capslock & space::#space ; toggle input method
 ; ----------------
 ; MicrosoftTODO
@@ -30,7 +26,7 @@ Capslock & q::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
 ; ----------------
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
-Capslock & e::^+!space ; clipboard using utools
+Capslock & e::^+!space ; call utools clipboard
 ; ----------------
 ; Top of all
 ; ----------------
@@ -98,6 +94,8 @@ Capslock & Enter up::SendInput {Blind}{Esc Up}
 ; ----------------
 Capslock & x::SendInput {Blind}{Del DownTemp}
 Capslock & x up::SendInput {Blind}{Del Up}
+Capslock & z::SendInput {Blind}{BS DownTemp}
+Capslock & z up::SendInput {Blind}{BS Up}
 Capslock & BS::SendInput {Blind}{Del DownTemp}
 Capslock & BS up::SendInput {Blind}{Del Up}
 ; ----------------
