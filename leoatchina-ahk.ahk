@@ -18,7 +18,7 @@ SetInputLang(Lang)
     ControlGetFocus, CtrlInFocus
     PostMessage, 0x50, 0, % Lang, %CtrlInFocus%
 }
-Capslock & e::SetInputLang(0x0409) ; English
+Capslock & u::SetInputLang(0x0409) ; English
 Capslock & y::^' ; NOTE:   ctrl + ' is used to invoke sogouwubi
 Capslock & space::#space ; toggle input method
 ; ----------------
@@ -30,6 +30,7 @@ Capslock & q::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
 ; ----------------
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
+Capslock & e::^+!space ; clipboard using utools
 ; ----------------
 ; Top of all
 ; ----------------
@@ -95,8 +96,6 @@ Capslock & Enter up::SendInput {Blind}{Esc Up}
 ; ----------------
 ; BS Del
 ; ----------------
-Capslock & u::SendInput {Blind}{BS DownTemp}
-Capslock & u up::SendInput {Blind}{BS Up}
 Capslock & x::SendInput {Blind}{Del DownTemp}
 Capslock & x up::SendInput {Blind}{Del Up}
 Capslock & BS::SendInput {Blind}{Del DownTemp}
