@@ -14,8 +14,8 @@ SetInputLang(Lang)
     ControlGetFocus, CtrlInFocus
     PostMessage, 0x50, 0, % Lang, %CtrlInFocus%
 }
-Capslock & i::SetInputLang(0x0409) ; English
-Capslock & u::^' ; NOTE: ctrl + ' is used to invoke sogouwubi
+Capslock & y::SetInputLang(0x0409) ; English
+Capslock & i::^' ; NOTE: ctrl + ' is used to invoke sogouwubi
 Capslock & space::#space ; toggle input method
 ; ----------------
 ; MicrosoftTODO
@@ -42,7 +42,7 @@ Capslock & r::Reload
 ; ----------------
 ; Volume control
 ; ----------------
-Capslock & m::Send {Volume_Mute}
+Capslock & u::Send {Volume_Mute}
 Capslock & ]::Send {Volume_Up}
 Capslock & [::Send {Volume_Down}
 ; ----------------
@@ -101,8 +101,8 @@ Capslock & BS up::SendInput {Blind}{Del Up}
 ; ----------------
 ; Capslock toggle
 ; ----------------
-Capslock & y::SendInput {Blind}{Capslock DownTemp}
-Capslock & y up::SendInput {Blind}{Capslock Up}
+Capslock & m::SendInput {Blind}{Capslock DownTemp}
+Capslock & m up::SendInput {Blind}{Capslock Up}
 ; ----------------
 ; Insert
 ; ----------------
