@@ -14,8 +14,8 @@ SetInputLang(Lang)
     ControlGetFocus, CtrlInFocus
     PostMessage, 0x50, 0, % Lang, %CtrlInFocus%
 }
-Capslock & u::SetInputLang(0x0409) ; English
-Capslock & y::^' ; NOTE:ctrl + ' is used to invoke sogouwubi
+Capslock & i::SetInputLang(0x0409) ; English
+Capslock & u::^' ; NOTE: ctrl + ' is used to invoke sogouwubi
 Capslock & space::#space ; toggle input method
 ; ----------------
 ; MicrosoftTODO
@@ -101,13 +101,13 @@ Capslock & BS up::SendInput {Blind}{Del Up}
 ; ----------------
 ; Capslock toggle
 ; ----------------
-Capslock & \::SendInput {Blind}{Capslock DownTemp}
-Capslock & \ up::SendInput {Blind}{Capslock Up}
+Capslock & y::SendInput {Blind}{Capslock DownTemp}
+Capslock & y up::SendInput {Blind}{Capslock Up}
 ; ----------------
 ; Insert
 ; ----------------
-Capslock & i::SendInput {Blind}{Insert DownTemp}
-Capslock & i up::SendInput {Blind}{Insert Up}
+Capslock & \::SendInput {Blind}{Insert DownTemp}
+Capslock & \ up::SendInput {Blind}{Insert Up}
 ; ----------------
 ; Fn
 ; ----------------
