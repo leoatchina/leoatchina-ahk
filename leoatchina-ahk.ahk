@@ -20,7 +20,7 @@ Capslock & space::#space ; toggle input method
 ; ----------------
 ; MicrosoftTODO
 ; ----------------
-Capslock & q::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
+Capslock & m::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
 ; ----------------
 ; Copy & paste
 ; ----------------
@@ -92,17 +92,17 @@ Capslock & Enter up::SendInput {Blind}{Esc Up}
 ; ----------------
 ; BS Del
 ; ----------------
+Capslock & q::SendInput {Blind}{BS DownTemp}
+Capslock & q up::SendInput {Blind}{BS Up}
 Capslock & x::SendInput {Blind}{Del DownTemp}
 Capslock & x up::SendInput {Blind}{Del Up}
-Capslock & z::SendInput {Blind}{BS DownTemp}
-Capslock & z up::SendInput {Blind}{BS Up}
 Capslock & BS::SendInput {Blind}{Del DownTemp}
 Capslock & BS up::SendInput {Blind}{Del Up}
 ; ----------------
 ; Capslock toggle
 ; ----------------
-Capslock & m::SendInput {Blind}{Capslock DownTemp}
-Capslock & m up::SendInput {Blind}{Capslock Up}
+Capslock & z::SendInput {Blind}{Capslock DownTemp}
+Capslock & z up::SendInput {Blind}{Capslock Up}
 ; ----------------
 ; Insert
 ; ----------------
