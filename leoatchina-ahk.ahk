@@ -18,9 +18,14 @@ Capslock & y::SetInputLang(0x0409) ; English
 Capslock & i::^' ; NOTE: ctrl + ' is used to invoke sogouwubi
 Capslock & space::#space ; toggle input method
 ; ----------------
+; GoldenDict
+; ----------------
+Capslock & g::^!+g
+Capslock & q::^!+q
+; ----------------
 ; MicrosoftTODO
 ; ----------------
-Capslock & m::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
+Capslock & t::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
 ; ----------------
 ; Copy & paste
 ; ----------------
@@ -28,13 +33,9 @@ Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 Capslock & e::^+!space ; call utools clipboard
 ; ----------------
-; Top of all
-; ----------------
-Capslock & t::Send, #+!t
-; ----------------
 ; Run taskmrg
 ; ----------------
-Capslock & g::Run, C:\Windows\system32\taskmgr.exe
+Capslock & m::Run, C:\Windows\system32\taskmgr.exe
 ; ----------------
 ; Reload ahk scripts
 ; ----------------
@@ -42,7 +43,7 @@ Capslock & r::Reload
 ; ----------------
 ; Volume control
 ; ----------------
-Capslock & u::Send {Volume_Mute}
+Capslock & '::Send {Volume_Mute}
 Capslock & ]::Send {Volume_Up}
 Capslock & [::Send {Volume_Down}
 ; ----------------
@@ -85,15 +86,13 @@ Capslock & `::SendInput {Blind}{Esc DownTemp}
 Capslock & ` up::SendInput {Blind}{Esc Up}
 Capslock & Tab::SendInput {Blind}{Esc DownTemp}
 Capslock & Tab up::SendInput {Blind}{Esc Up}
-Capslock & Esc::SendInput {Blind}{Esc DownTemp}
-Capslock & Esc up::SendInput {Blind}{Esc Up}
 Capslock & Enter::SendInput {Blind}{Esc DownTemp}
 Capslock & Enter up::SendInput {Blind}{Esc Up}
 ; ----------------
 ; BS Del
 ; ----------------
-Capslock & q::SendInput {Blind}{BS DownTemp}
-Capslock & q up::SendInput {Blind}{BS Up}
+Capslock & u::SendInput {Blind}{BS DownTemp}
+Capslock & u up::SendInput {Blind}{BS Up}
 Capslock & x::SendInput {Blind}{Del DownTemp}
 Capslock & x up::SendInput {Blind}{Del Up}
 Capslock & BS::SendInput {Blind}{Del DownTemp}
@@ -101,8 +100,8 @@ Capslock & BS up::SendInput {Blind}{Del Up}
 ; ----------------
 ; Capslock toggle
 ; ----------------
-Capslock & z::SendInput {Blind}{Capslock DownTemp}
-Capslock & z up::SendInput {Blind}{Capslock Up}
+Capslock & Esc::SendInput {Blind}{Capslock DownTemp}
+Capslock & Esc up::SendInput {Blind}{Capslock Up}
 ; ----------------
 ; Insert
 ; ----------------
