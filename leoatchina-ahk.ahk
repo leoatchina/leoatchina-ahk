@@ -27,15 +27,19 @@ Capslock & q::^!+q
 ; ----------------
 Capslock & t::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
 ; ----------------
+; zeal
+; ----------------
+Capslock & z::^!+z
+; ----------------
 ; Copy & paste
 ; ----------------
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
-Capslock & e::^+!space ; call utools clipboard
+Capslock & e::^+!v ; call utools clipboard
 ; ----------------
 ; Run taskmrg
 ; ----------------
-Capslock & m::Run, C:\Windows\system32\taskmgr.exe
+Capslock & m::Run "C:\Windows\system32\taskmgr.exe"
 ; ----------------
 ; Reload ahk scripts
 ; ----------------
