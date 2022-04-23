@@ -14,8 +14,8 @@ SetInputLang(Lang)
     ControlGetFocus, CtrlInFocus
     PostMessage, 0x50, 0, % Lang, %CtrlInFocus%
 }
-Capslock & y::SetInputLang(0x0409) ; English
 Capslock & i::^' ; NOTE: ctrl + ' is used to invoke sogouwubi
+Capslock & u::SetInputLang(0x0409) ; English
 Capslock & space::#space ; toggle input method
 ; ----------------
 ; GoldenDict
@@ -95,8 +95,8 @@ Capslock & Enter up::SendInput {Blind}{Esc Up}
 ; ----------------
 ; BS Del
 ; ----------------
-Capslock & u::SendInput {Blind}{BS DownTemp}
-Capslock & u up::SendInput {Blind}{BS Up}
+Capslock & y::SendInput {Blind}{BS DownTemp}
+Capslock & y up::SendInput {Blind}{BS Up}
 Capslock & x::SendInput {Blind}{Del DownTemp}
 Capslock & x up::SendInput {Blind}{Del Up}
 Capslock & BS::SendInput {Blind}{Del DownTemp}
