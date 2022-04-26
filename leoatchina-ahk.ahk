@@ -102,8 +102,6 @@ Capslock & BS up::SendInput {Blind}{Del Up}
 ; ----------------
 ; Capslock toggle
 ; ----------------
-Capslock & Esc::SendInput {Blind}{Capslock DownTemp}
-Capslock & Esc up::SendInput {Blind}{Capslock Up}
 Capslock & `::SendInput {Blind}{Capslock DownTemp}
 Capslock & ` up::SendInput {Blind}{Capslock Up}
 ; ----------------
