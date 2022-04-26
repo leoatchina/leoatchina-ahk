@@ -86,8 +86,6 @@ Capslock & n up::SendInput {Blind}{PgDn Up}
 ; ----------------
 ; Esc
 ; ----------------
-Capslock & `::SendInput {Blind}{Esc DownTemp}
-Capslock & ` up::SendInput {Blind}{Esc Up}
 Capslock & Tab::SendInput {Blind}{Esc DownTemp}
 Capslock & Tab up::SendInput {Blind}{Esc Up}
 Capslock & Enter::SendInput {Blind}{Esc DownTemp}
@@ -106,6 +104,8 @@ Capslock & BS up::SendInput {Blind}{Del Up}
 ; ----------------
 Capslock & Esc::SendInput {Blind}{Capslock DownTemp}
 Capslock & Esc up::SendInput {Blind}{Capslock Up}
+Capslock & `::SendInput {Blind}{Capslock DownTemp}
+Capslock & ` up::SendInput {Blind}{Capslock Up}
 ; ----------------
 ; Insert
 ; ----------------
