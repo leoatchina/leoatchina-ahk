@@ -1,3 +1,10 @@
+; ----------------
+; map for snipaste
+; ----------------
+#f::Send ^{F1}
+#u::Send ^{F2}
+#b::Send !{F1}
+
 #Persistent
 SetCapsLockState, AlwaysOff
 ; ----------------
@@ -10,7 +17,7 @@ Capslock & o::Run explorer.exe
 ; XXX: https://r.nf/smbrx4
 SetInputLang(Lang)
 {
-    WinExist("A")
+  WinExist("A")
     ControlGetFocus, CtrlInFocus
     PostMessage, 0x50, 0, % Lang, %CtrlInFocus%
 }
@@ -140,10 +147,10 @@ Capslock & = up::SendInput {Blind}{F12 Up}
 ; 去除复制来的内容里的回车, 按win+alt+c,  # 是win, ! 是alt
 ; ----------------
 #!c::
-    tmp := RegExReplace(clipboard, "(\S.*?)\R(.*?\S)", "$1 $2")
-    clipboard := tmp
-    ; StringReplace clipboard, clipboard, % " ", % "", A
-    clipwait 0.1
+tmp := RegExReplace(clipboard, "(\S.*?)\R(.*?\S)", "$1 $2")
+clipboard := tmp
+; StringReplace clipboard, clipboard, % " ", % "", A
+clipwait 0.1
 return
 ; ----------------
 ; NOTE: For proe 两侧键作为中键
@@ -154,5 +161,5 @@ return
 #InstallMouseHook
 #UseHook
 #IfWinActive ahk_exe xtop.exe
-	XButton1::MButton
-	XButton2::MButton
+XButton1::MButton
+XButton2::MButton
