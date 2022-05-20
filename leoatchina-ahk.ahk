@@ -22,7 +22,9 @@ SetInputLang(Lang)
 }
 Capslock & i::^' ; NOTE: ctrl + ' is used to invoke sogouwubi
 Capslock & u::SetInputLang(0x0409) ; English
-Capslock & space::#space ; toggle input method
+; ----------------
+; TODO: Capslock + e to edit
+; ----------------
 ; ----------------
 ; GoldenDict
 ; ----------------
@@ -41,7 +43,7 @@ Capslock & z::^!+z
 ; ----------------
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
-Capslock & e::^+!space ; call utools clipboard
+Capslock & space::^+!space ; call utools clipboard
 ; ----------------
 ; Run taskmrg
 ; ----------------
