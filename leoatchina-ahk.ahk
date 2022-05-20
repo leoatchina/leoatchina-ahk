@@ -41,7 +41,7 @@ Capslock & z::^!+z
 ; ----------------
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
-Capslock & e::^+!v ; call utools clipboard
+Capslock & e::^+!space ; call utools clipboard
 ; ----------------
 ; Run taskmrg
 ; ----------------
