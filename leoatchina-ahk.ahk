@@ -23,8 +23,9 @@ SetInputLang(Lang)
 Capslock & i::^' ; NOTE: ctrl + ' is used to invoke sogouwubi
 Capslock & u::SetInputLang(0x0409) ; English
 ; ----------------
-; TODO: Capslock + e to edit
+; clipboard in utools 
 ; ----------------
+Capslock & e::^!+space
 ; ----------------
 ; GoldenDict
 ; ----------------
