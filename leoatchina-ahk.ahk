@@ -25,7 +25,7 @@ Capslock & u::SetInputLang(0x0409) ; English
 ; ----------------
 ; clipboard in utools 
 ; ----------------
-Capslock & e::^!+space
+Capslock & e::^!+e
 ; ----------------
 ; GoldenDict
 ; ----------------
@@ -44,7 +44,7 @@ Capslock & z::^!+z
 ; ----------------
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
-Capslock & space::^+!space ; call utools clipboard
+Capslock & space::^+!e
 ; ----------------
 ; Run taskmrg
 ; ----------------
