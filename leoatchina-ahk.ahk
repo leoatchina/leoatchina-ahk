@@ -7,38 +7,9 @@ SetCapsLockState, AlwaysOff
 #u::Send ^{F2}
 #b::Send !{F1}
 ; ----------------
-; Explorer
+; Input method control change
 ; ----------------
-Capslock & o::Run explorer.exe
-; ----------------
-; Input method control
-; ----------------
-; XXX: https://r.nf/smbrx4
-SetInputLang(Lang)
-{
-  WinExist("A")
-    ControlGetFocus, CtrlInFocus
-    PostMessage, 0x50, 0, % Lang, %CtrlInFocus%
-}
-Capslock & i::^' ; NOTE: ctrl + ' is used to invoke sogouwubi
-Capslock & u::SetInputLang(0x0409) ; English
-; ----------------
-; clipboard in utools 
-; ----------------
-Capslock & e::^!+e
-; ----------------
-; GoldenDict
-; ----------------
-Capslock & g::^!+g
-Capslock & q::^!+q
-; ----------------
-; MicrosoftTODO
-; ----------------
-Capslock & t::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
-; ----------------
-; zeal
-; ----------------
-Capslock & z::^!+z
+Capslock & i::Send #{Space}
 ; ----------------
 ; Copy & paste
 ; ----------------
@@ -46,9 +17,35 @@ Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 Capslock & space::^+!e
 ; ----------------
+; GoldenDict
+; ----------------
+Capslock & g::^!+g
+Capslock & q::^!+q
+; ----------------
+; ----------------
+; zeal
+; ----------------
+Capslock & z::^!+z
+; ----------------
+; Explorer
+; ----------------
+Capslock & e::Run explorer.exe
+; ----------------
+; MicrosoftTODO
+; ----------------
+Capslock & t::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
+; ----------------
 ; Run taskmrg
 ; ----------------
 Capslock & m::Run "C:\Windows\system32\taskmgr.exe"
+; ----------------
+; Run obsidian
+; ----------------
+Capslock & o::Run "C:\Users\LEO\scoop\apps\obsidian\current\obsidian.exe"
+; ----------------
+; Run joplin
+; ----------------
+Capslock & u::Run "C:\Users\LEO\scoop\apps\joplin\current\joplin.exe"
 ; ----------------
 ; Reload ahk scripts
 ; ----------------
