@@ -10,7 +10,7 @@ SetCapsLockState, AlwaysOff
 ; Input method control change
 ; ----------------
 Capslock & i::Send #{Space}
-Capslock & alt::Send {Shift down}{alt}{Shift up}
+Capslock & space::Send {Shift down}{alt}{Shift up}
 ; ----------------
 ; Explorer
 ; ----------------
@@ -29,7 +29,7 @@ Capslock & m::Run "C:\Windows\system32\taskmgr.exe"
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; ctrl + alt + shift + e is set in ditto
-Capslock & space::^+!e
+Capslock & alt::^+!e
 ; ----------------
 ; GoldenDict
 ; ----------------
