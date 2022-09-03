@@ -12,6 +12,18 @@ SetCapsLockState, AlwaysOff
 Capslock & i::Send #{Space}
 Capslock & alt::Send {Shift down}{alt}{Shift up}
 ; ----------------
+; Explorer
+; ----------------
+Capslock & e::Run explorer.exe
+; ----------------
+; MicrosoftTODO
+; ----------------
+Capslock & t::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
+; ----------------
+; Run taskmrg
+; ----------------
+Capslock & m::Run "C:\Windows\system32\taskmgr.exe"
+; ----------------
 ; Copy & paste
 ; ----------------
 Capslock & v::Send {Shift down}{Ins}{Shift up}
@@ -24,22 +36,9 @@ Capslock & space::^+!e
 Capslock & g::^!+g
 Capslock & q::^!+q
 ; ----------------
-; ----------------
 ; zeal
 ; ----------------
 Capslock & z::^!+z
-; ----------------
-; Explorer
-; ----------------
-Capslock & e::Run explorer.exe
-; ----------------
-; MicrosoftTODO
-; ----------------
-Capslock & t::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
-; ----------------
-; Run taskmrg
-; ----------------
-Capslock & m::Run "C:\Windows\system32\taskmgr.exe"
 ; ----------------
 ; Run obsidian
 ; ----------------
