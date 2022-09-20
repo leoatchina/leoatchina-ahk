@@ -7,10 +7,22 @@ SetCapsLockState, AlwaysOff
 #u::Send ^{F2}
 #b::Send !{F1}
 ; ----------------
+; Esc
+; ----------------
+Capslock & Tab::SendInput {Blind}{Esc DownTemp}
+Capslock & Tab up::SendInput {Blind}{Esc Up}
+Capslock & Enter::SendInput {Blind}{Esc DownTemp}
+Capslock & Enter up::SendInput {Blind}{Esc Up}
+; ----------------
+; Capslock toggle
+; ----------------
+Capslock & `::SendInput {Blind}{Capslock DownTemp}
+Capslock & ` up::SendInput {Blind}{Capslock Up}
+; ----------------
 ; Input method control change
 ; ----------------
-Capslock & i::Send #{Space}
-Capslock & alt::Send {Shift down}{alt}{Shift up}
+Capslock & space::Send #{Space}
+Capslock & i::Send {Ctrl down}{Shift}{Ctrl up}
 ; ----------------
 ; Explorer
 ; ----------------
@@ -28,8 +40,8 @@ Capslock & m::Run "C:\Windows\system32\taskmgr.exe"
 ; ----------------
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
-; ctrl + alt + shift + e is set to evoke registers in ditto
-Capslock & space::^+!e
+; ctrl + alt + shift + win + v is set to evoke registers in ditto
+Capslock & alt::^+!#v
 ; ----------------
 ; GoldenDict
 ; ----------------
@@ -91,26 +103,12 @@ Capslock & p up::SendInput {Blind}{PgUp Up}
 Capslock & n::SendInput {Blind}{PgDn DownTemp}
 Capslock & n up::SendInput {Blind}{PgDn Up}
 ; ----------------
-; Esc
-; ----------------
-Capslock & Tab::SendInput {Blind}{Esc DownTemp}
-Capslock & Tab up::SendInput {Blind}{Esc Up}
-Capslock & Enter::SendInput {Blind}{Esc DownTemp}
-Capslock & Enter up::SendInput {Blind}{Esc Up}
-; ----------------
 ; BS Del
 ; ----------------
 Capslock & y::SendInput {Blind}{BS DownTemp}
 Capslock & y up::SendInput {Blind}{BS Up}
 Capslock & x::SendInput {Blind}{Del DownTemp}
 Capslock & x up::SendInput {Blind}{Del Up}
-Capslock & BS::SendInput {Blind}{Del DownTemp}
-Capslock & BS up::SendInput {Blind}{Del Up}
-; ----------------
-; Capslock toggle
-; ----------------
-Capslock & `::SendInput {Blind}{Capslock DownTemp}
-Capslock & ` up::SendInput {Blind}{Capslock Up}
 ; ----------------
 ; Insert
 ; ----------------
