@@ -21,27 +21,19 @@ Capslock & ` up::SendInput {Blind}{Capslock Up}
 ; ----------------
 ; Input method control change
 ; ----------------
-Capslock & alt::Send #{Space}
+Capslock & i::Send #{Space}
 Capslock & space::Send {Ctrl down}{Shift}{Ctrl up}
-; ----------------
-; Explorer
-; ----------------
-Capslock & e::Run explorer.exe
 ; ----------------
 ; MicrosoftTODO
 ; ----------------
 Capslock & t::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
-; ----------------
-; Run taskmrg
-; ----------------
-Capslock & m::Run "C:\Windows\system32\taskmgr.exe"
 ; ----------------
 ; Copy & paste
 ; ----------------
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; ctrl + alt + shift + win + v is set to evoke registers in ditto
-Capslock & i::^+!#v
+Capslock & alt::^+!#v
 ; ----------------
 ; GoldenDict
 ; ----------------
@@ -52,6 +44,10 @@ Capslock & q::^!+q
 ; ----------------
 Capslock & z::^!+z
 ; ----------------
+; Run taskmrg
+; ----------------
+Capslock & m::Run "C:\Windows\system32\taskmgr.exe"
+; ----------------
 ; Run obsidian
 ; ----------------
 Capslock & o::Run "C:\Users\LEO\scoop\apps\obsidian\current\obsidian.exe"
@@ -59,6 +55,10 @@ Capslock & o::Run "C:\Users\LEO\scoop\apps\obsidian\current\obsidian.exe"
 ; Run joplin
 ; ----------------
 Capslock & u::Run "C:\Users\LEO\scoop\apps\joplin\current\joplin.exe"
+; ----------------
+; Explorer
+; ----------------
+Capslock & e::Run explorer.exe
 ; ----------------
 ; Reload ahk scripts
 ; ----------------
