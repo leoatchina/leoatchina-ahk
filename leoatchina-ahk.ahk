@@ -9,15 +9,15 @@ SetCapsLockState, AlwaysOff
 ; ----------------
 ; Esc
 ; ----------------
-Capslock & Tab::SendInput {Blind}{Esc DownTemp}
-Capslock & Tab up::SendInput {Blind}{Esc Up}
+Capslock & `::SendInput {Blind}{Esc DownTemp}
+Capslock & ` up::SendInput {Blind}{Esc Up}
 Capslock & Enter::SendInput {Blind}{Esc DownTemp}
 Capslock & Enter up::SendInput {Blind}{Esc Up}
 ; ----------------
 ; Capslock toggle
 ; ----------------
-Capslock & `::SendInput {Blind}{Capslock DownTemp}
-Capslock & ` up::SendInput {Blind}{Capslock Up}
+Capslock & Tab::SendInput {Blind}{Capslock DownTemp}
+Capslock & Tab up::SendInput {Blind}{Capslock Up}
 ; ----------------
 ; Input method control change
 ; ----------------
