@@ -109,6 +109,8 @@ Capslock & y::SendInput {Blind}{BS DownTemp}
 Capslock & y up::SendInput {Blind}{BS Up}
 Capslock & x::SendInput {Blind}{Del DownTemp}
 Capslock & x up::SendInput {Blind}{Del Up}
+Capslock & backspace::SendInput {Blind}{Del DownTemp}
+Capslock & backspace up::SendInput {Blind}{Del Up}
 ; ----------------
 ; Insert
 ; ----------------
