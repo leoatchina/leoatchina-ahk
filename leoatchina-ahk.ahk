@@ -21,12 +21,11 @@ Capslock & Tab up::SendInput {Blind}{Capslock Up}
 ; ----------------
 ; Input method control change
 ; ----------------
-Capslock & i::Send #{Space}
 Capslock & space::Send {Ctrl down}{Shift}{Ctrl up}
 ; ----------------
 ; MicrosoftTODO
 ; ----------------
-Capslock & t::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
+Capslock & o::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
 ; ----------------
 ; Copy & paste
 ; ----------------
@@ -46,15 +45,8 @@ Capslock & z::^!+z
 ; ----------------
 ; Run taskmrg
 ; ----------------
-Capslock & m::Run "C:\Windows\system32\taskmgr.exe"
+Capslock & t::Run "C:\Windows\system32\taskmgr.exe"
 ; ----------------
-; Run obsidian
-; ----------------
-Capslock & o::Run "C:\Users\LEO\scoop\apps\obsidian\current\obsidian.exe"
-; ----------------
-; Run joplin
-; ----------------
-Capslock & u::Run "C:\Users\LEO\scoop\apps\joplin\current\joplin.exe"
 ; ----------------
 ; Explorer
 ; ----------------
@@ -66,9 +58,9 @@ Capslock & r::Reload
 ; ----------------
 ; Volume control
 ; ----------------
-Capslock & '::Send {Volume_Mute}
-Capslock & ]::Send {Volume_Up}
-Capslock & [::Send {Volume_Down}
+Capslock & m::Send {Volume_Mute}
+Capslock & u::Send {Volume_Up}
+Capslock & i::Send {Volume_Down}
 ; ----------------
 ; Left, Down, Up, Right
 ; ----------------
