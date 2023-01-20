@@ -21,11 +21,12 @@ Capslock & Tab up::SendInput {Blind}{Capslock Up}
 ; ----------------
 ; Input method control change
 ; ----------------
+Capslock & '::Send #{Space}
 Capslock & space::Send {Ctrl down}{Shift}{Ctrl up}
 ; ----------------
 ; MicrosoftTODO
 ; ----------------
-Capslock & o::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
+Capslock & t::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
 ; ----------------
 ; Copy & paste
 ; ----------------
@@ -45,7 +46,7 @@ Capslock & z::^!+z
 ; ----------------
 ; Run taskmrg
 ; ----------------
-Capslock & t::Run "C:\Windows\system32\taskmgr.exe"
+Capslock & m::Run "C:\Windows\system32\taskmgr.exe"
 ; ----------------
 ; ----------------
 ; Explorer
@@ -58,7 +59,7 @@ Capslock & r::Reload
 ; ----------------
 ; Volume control
 ; ----------------
-Capslock & m::Send {Volume_Mute}
+Capslock & o::Send {Volume_Mute}
 Capslock & u::Send {Volume_Up}
 Capslock & i::Send {Volume_Down}
 ; ----------------
