@@ -21,8 +21,8 @@ Capslock & Tab up::SendInput {Blind}{Capslock Up}
 ; ----------------
 ; Input method control change
 ; ----------------
-Capslock & '::Send #{Space}
-Capslock & space::Send {Ctrl down}{Shift}{Ctrl up}
+Capslock & space::Send #{Space}
+Capslock & '::Send {Ctrl down}{Shift}{Ctrl up}
 ; ----------------
 ; MicrosoftTODO
 ; ----------------
