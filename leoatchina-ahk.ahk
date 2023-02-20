@@ -11,8 +11,8 @@ SetCapsLockState, AlwaysOff
 ; ----------------
 Capslock & `::SendInput {Blind}{Esc DownTemp}
 Capslock & ` up::SendInput {Blind}{Esc Up}
-Capslock & Enter::SendInput {Blind}{Esc DownTemp}
-Capslock & Enter up::SendInput {Blind}{Esc Up}
+Capslock & backspace::SendInput {Blind}{Esc DownTemp}
+Capslock & backspace up::SendInput {Blind}{Esc Up}
 ; ----------------
 ; Capslock toggle
 ; ----------------
@@ -102,8 +102,6 @@ Capslock & y::SendInput {Blind}{BS DownTemp}
 Capslock & y up::SendInput {Blind}{BS Up}
 Capslock & x::SendInput {Blind}{Del DownTemp}
 Capslock & x up::SendInput {Blind}{Del Up}
-Capslock & backspace::SendInput {Blind}{Del DownTemp}
-Capslock & backspace up::SendInput {Blind}{Del Up}
 ; ----------------
 ; Insert
 ; ----------------
