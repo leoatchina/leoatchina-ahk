@@ -28,40 +28,19 @@ Capslock & Enter::Send {Ctrl down}{Shift}{Ctrl up}
 ; ----------------
 Capslock & t::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
 ; ----------------
-; Copy & paste
+; Volume control
 ; ----------------
-Capslock & v::Send {Shift down}{Ins}{Shift up}
-Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
-; ctrl + alt + shift + win + v is set to evoke registers in ditto
-Capslock & alt::^+!#v
+Capslock & m::Send {Volume_Mute}
+Capslock & p::Send {Volume_Up}
+Capslock & n::Send {Volume_Down}
 ; ----------------
-; GoldenDict
+; Run taskmgr
 ; ----------------
-Capslock & g::^!+g
-Capslock & q::^!+q
-; ----------------
-; zeal
-; ----------------
-Capslock & z::^!+z
-; ----------------
-; Run taskmrg
-; ----------------
-Capslock & m::Run "C:\Windows\system32\taskmgr.exe"
-; ----------------
+Capslock & u::Run "C:\Windows\system32\taskmgr.exe"
 ; ----------------
 ; Explorer
 ; ----------------
-Capslock & e::Run explorer.exe
-; ----------------
-; Reload ahk scripts
-; ----------------
-Capslock & r::Reload
-; ----------------
-; Volume control
-; ----------------
-Capslock & o::Send {Volume_Mute}
-Capslock & u::Send {Volume_Up}
-Capslock & i::Send {Volume_Down}
+Capslock & o::Run explorer.exe
 ; ----------------
 ; Left, Down, Up, Right
 ; ----------------
@@ -91,10 +70,10 @@ Capslock & f up::SendInput {Blind}{End Up}
 ; ----------------
 ; PgUp PgDn
 ; ----------------
-Capslock & p::SendInput {Blind}{PgUp DownTemp}
-Capslock & p up::SendInput {Blind}{PgUp Up}
-Capslock & n::SendInput {Blind}{PgDn DownTemp}
-Capslock & n up::SendInput {Blind}{PgDn Up}
+Capslock & q::SendInput {Blind}{PgUp DownTemp}
+Capslock & q up::SendInput {Blind}{PgUp Up}
+Capslock & e::SendInput {Blind}{PgDn DownTemp}
+Capslock & e up::SendInput {Blind}{PgDn Up}
 ; ----------------
 ; BS Del
 ; ----------------
@@ -143,9 +122,29 @@ clipboard := tmp
 ; StringReplace clipboard, clipboard, % " ", % "", A
 clipwait 0.1
 return
-; ----------------
-; NOTE: For proe 两侧键作为中键
-; ----------------
+
+; ------------------------------------ 
+; Reload ahk scripts
+; ------------------------------------ 
+Capslock & r::Reload
+; ------------------------------------ 
+; GoldenDict
+; ------------------------------------ 
+Capslock & g::^!+g
+Capslock & i::^!+i
+; ------------------------------------ 
+; zeal
+; ------------------------------------ 
+Capslock & z::^!+z
+; ------------------------------------ 
+; ctrl + alt + shift + win + v was set to evoke registers in ditto
+; ------------------------------------ 
+Capslock & alt::^+!#v
+Capslock & v::Send {Shift down}{Ins}{Shift up}
+Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
+; ------------------------------------ 
+; proe ONLY, 两侧键作为中键
+; ------------------------------------ 
 #NoEnv
 #SingleInstance Force
 #InstallKeybdHook
