@@ -11,8 +11,10 @@ SetCapsLockState, AlwaysOff
 ; ----------------
 Capslock & `::SendInput {Blind}{Esc DownTemp}
 Capslock & ` up::SendInput {Blind}{Esc Up}
-Capslock & Enter::SendInput {Blind}{Esc DownTemp}
-Capslock & Enter up::SendInput {Blind}{Esc Up}
+Capslock & [::SendInput {Blind}{Esc DownTemp}
+Capslock & [ up::SendInput {Blind}{Esc Up}
+Capslock & ]::SendInput {Blind}{Esc DownTemp}
+Capslock & ] up::SendInput {Blind}{Esc Up}
 ; ----------------
 ; Del
 ; ----------------
@@ -26,7 +28,9 @@ Capslock & Tab up::SendInput {Blind}{Capslock Up}
 ; ----------------
 ; Input method control change
 ; ----------------
-Capslock & Space::Send {Ctrl down}{Shift}{Ctrl up}
+Capslock & Enter::Send {Ctrl down}{Shift}{Ctrl up}
+Capslock & Space::Send #{Space} 
+; Capslock & Enter up::SendInput {Blind}{Esc Up}
 ; ----------------
 ; MicrosoftTODO
 ; ----------------
