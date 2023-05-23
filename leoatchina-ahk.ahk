@@ -26,12 +26,6 @@ Capslock & backspace up::SendInput {Blind}{Del Up}
 Capslock & Tab::SendInput {Blind}{Capslock DownTemp}
 Capslock & Tab up::SendInput {Blind}{Capslock Up}
 ; ----------------
-; Input method control change
-; ----------------
-Capslock & Enter::Send {Ctrl down}{Shift}{Ctrl up}
-Capslock & Space::Send #{Space} 
-; Capslock & Enter up::SendInput {Blind}{Esc Up}
-; ----------------
 ; MicrosoftTODO
 ; ----------------
 Capslock & t::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
@@ -121,38 +115,50 @@ Capslock & -::SendInput    {Blind}{F11 DownTemp}
 Capslock & - up::SendInput {Blind}{F11 Up}
 Capslock & =::SendInput    {Blind}{F12 DownTemp}
 Capslock & = up::SendInput {Blind}{F12 Up}
-; ----------------
+; ------------------------------------
 ; 去除复制来的内容里的回车, 按win+alt+c,  # 是win, ! 是alt
-; ----------------
+; ------------------------------------
 #!c::
 tmp := RegExReplace(clipboard, "(\S.*?)\R(.*?\S)", "$1 $2")
 clipboard := tmp
 ; StringReplace clipboard, clipboard, % " ", % "", A
 clipwait 0.1
 return
-
-; ------------------------------------ 
+; ------------------------------------
 ; Reload ahk scripts
-; ------------------------------------ 
+; ------------------------------------
 Capslock & r::Reload
-; ------------------------------------ 
+; ------------------------------------
 ; GoldenDict
-; ------------------------------------ 
+; ------------------------------------
 Capslock & g::^!+g
 Capslock & i::^!+i
-; ------------------------------------ 
+; ------------------------------------
 ; zeal
-; ------------------------------------ 
+; ------------------------------------
 Capslock & z::^!+z
-; ------------------------------------ 
-; ctrl + alt + shift + win + v was set to evoke registers in ditto
-; ------------------------------------ 
+; ------------------------------------
+; Input method control change
+; ------------------------------------
+CapsLock & Enter::
+  Send {Ctrl Down}{Shift Down}
+  KeyWait, Space
+  Send {Ctrl Up}{Shift Up}
+Return
+CapsLock & Space::
+  Send {LWin Down}{Space Down}
+  KeyWait, Space
+  Send {LWin Up}{Space Up}
+Return
+; ------------------------------------
+; ctrl+alt+shift+win+v set to ditto
+; ------------------------------------
 Capslock & alt::^+!#v
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
-; ------------------------------------ 
+; ------------------------------------
 ; proe ONLY, 两侧键作为中键
-; ------------------------------------ 
+; ------------------------------------
 #NoEnv
 #SingleInstance Force
 #InstallKeybdHook
