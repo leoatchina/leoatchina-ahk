@@ -142,7 +142,7 @@ Capslock & z::^!+z
 ; ------------------------------------
 CapsLock & Enter::
   Send {LWin Down}{Space Down}
-  KeyWait, Shift
+  KeyWait, Enter
   Send {LWin Up}{Space Up}
 Return
 CapsLock & Space::
@@ -152,7 +152,7 @@ CapsLock & Space::
 Return
 CapsLock & Shift::
   Send {Ctrl Down}{. Down}
-  KeyWait, Enter 
+  KeyWait, Shift
   Send {Ctrl Up}{. Up}
 Return
 CapsLock & Ctrl::
