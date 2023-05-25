@@ -141,14 +141,24 @@ Capslock & z::^!+z
 ; Input method control change
 ; ------------------------------------
 CapsLock & Enter::
-  Send {Ctrl Down}{Shift Down}
-  KeyWait, Space
-  Send {Ctrl Up}{Shift Up}
+  Send {LWin Down}{Space Down}
+  KeyWait, Shift
+  Send {LWin Up}{Space Up}
 Return
 CapsLock & Space::
-  Send {LWin Down}{Space Down}
+  Send {Ctrl Down}{Space Down}
   KeyWait, Space
-  Send {LWin Up}{Space Up}
+  Send {Ctrl Up}{Space Up}
+Return
+CapsLock & Shift::
+  Send {Ctrl Down}{. Down}
+  KeyWait, Enter 
+  Send {Ctrl Up}{. Up}
+Return
+CapsLock & Ctrl::
+  Send {Shift Down}{Alt Down}
+  KeyWait, Ctrl
+  Send {Shift Up}{Alt Up}
 Return
 ; ------------------------------------
 ; ctrl+alt+shift+win+v set to ditto
