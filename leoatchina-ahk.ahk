@@ -6,7 +6,6 @@ SetCapsLockState, AlwaysOff
 #f::Send ^{F1}
 #u::Send ^{F2}
 #b::Send !{F1}
-#a::Send ^!+a
 ; ----------------
 ; Esc
 ; ----------------
@@ -27,9 +26,9 @@ Capslock & backspace up::SendInput {Blind}{Del Up}
 Capslock & Tab::SendInput {Blind}{Capslock DownTemp}
 Capslock & Tab up::SendInput {Blind}{Capslock Up}
 ; ----------------
-; MicrosoftTODO
+; wechat screen shot 
 ; ----------------
-Capslock & t::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
+Capslock & t::Send ^+!a
 ; ----------------
 ; Volume control
 ; ----------------
