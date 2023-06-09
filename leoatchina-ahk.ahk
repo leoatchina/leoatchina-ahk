@@ -26,9 +26,9 @@ Capslock & backspace up::SendInput {Blind}{Del Up}
 Capslock & Tab::SendInput {Blind}{Capslock DownTemp}
 Capslock & Tab up::SendInput {Blind}{Capslock Up}
 ; ----------------
-; wechat screen shot 
+; MicrosoftTODO
 ; ----------------
-Capslock & t::Send ^+!a
+Capslock & t::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
 ; ----------------
 ; Volume control
 ; ----------------
