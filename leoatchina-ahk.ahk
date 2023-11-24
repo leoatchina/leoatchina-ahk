@@ -154,7 +154,7 @@ Return
 ; ------------------------------------
 ; ctrl+shift+`set to ditto paste
 ; ------------------------------------
-Capslock & alt::^!`
+Capslock & alt::^`
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; ------------------------------------
