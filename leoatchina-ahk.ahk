@@ -152,9 +152,9 @@ CapsLock & Ctrl::
   Send {Shift Up}{Alt Up}
 Return
 ; ------------------------------------
-; ctrl+alt+shift+win+v set to ditto
+; ctrl+shift+`set to ditto paste
 ; ------------------------------------
-Capslock & alt::^+!#v
+Capslock & alt::^`
 Capslock & v::Send {Shift down}{Ins}{Shift up}
 Capslock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; ------------------------------------
