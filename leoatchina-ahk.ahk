@@ -137,14 +137,14 @@ CapsLock & Enter::
   Send {LWin Up}{Space Up}
 Return
 CapsLock & Space::
-  Send {Ctrl Down}{Space Down}
+  Send {Ctrl Down}{Shift Down}
   KeyWait, Space
-  Send {Ctrl Up}{Space Up}
+  Send {Ctrl Up}{Shift Up}
 Return
 CapsLock & Shift::
-  Send {Ctrl Down}{. Down}
+  Send {Ctrl Down}{Space Down}
   KeyWait, Shift
-  Send {Ctrl Up}{. Up}
+  Send {Ctrl Up}{Space Up}
 Return
 CapsLock & Ctrl::
   Send {Shift Down}{Alt Down}
