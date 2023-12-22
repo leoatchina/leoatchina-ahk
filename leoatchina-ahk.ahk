@@ -142,16 +142,11 @@ CapsLock & Space::
   Send {Ctrl Up}{Shift Up}
 Return
 CapsLock & Shift::
-  Send {Ctrl Down}{Space Down}
-  KeyWait, Shift
-  Send {Ctrl Up}{Space Up}
-Return
-CapsLock & Ctrl::
-  Send {Shift Down}{Alt Down}
+  Send {Ctrl Down}{. Down}
   KeyWait, Ctrl
-  Send {Shift Up}{Alt Up}
+  Send {Ctrl Up}{. Up}
 Return
-Shift & CapsLock::Send {Ctrl Down}{Space Down}{Space Up}{Ctrl Up}
+Shift & CapsLock::Send {Ctrl Down}{. Down}{. Up}
 ; ------------------------------------
 ; ctrl+shift+`set to ditto paste
 ; ------------------------------------
