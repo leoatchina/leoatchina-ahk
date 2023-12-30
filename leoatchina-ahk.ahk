@@ -137,9 +137,9 @@ CapsLock & Enter::
   Send {LWin Up}{Space Up}
 Return
 CapsLock & Space::
-  Send {Ctrl Down}{Shift Down}
+  Send {Ctrl Down}{LWin Down}{Space Down}
   KeyWait, Space
-  Send {Ctrl Up}{Shift Up}
+  Send {Ctrl Up}{LWin Up}{Space Up}
 Return
 CapsLock & Shift::
   Send {Ctrl Down}{. Down}
