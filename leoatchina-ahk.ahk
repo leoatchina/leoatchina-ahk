@@ -150,11 +150,11 @@ Shift & CapsLock::Send {Ctrl Down}{. Down}{. Up}
 ; ------------------------------------
 ; ctrl+shift+`set to ditto paste
 ; ------------------------------------
-CapsLock & alt::^`
+CapsLock & alt::#`
 CapsLock & v::Send {Shift down}{Ins}{Shift up}
 CapsLock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; ------------------------------------
-; 去除复制来的内容里的回车, 按win+alt+c,  # 是win, ! 是alt
+; 去除复制来的内容里的回车, 按win+alt+c,  #是win, !是alt, ^是ctrl, +是shift
 ; ------------------------------------
 #!c::
 tmp := RegExReplace(clipboard, "(\S.*?)\R(.*?\S)", "$1 $2")
