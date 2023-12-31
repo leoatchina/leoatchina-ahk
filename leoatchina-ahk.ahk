@@ -144,7 +144,7 @@ Return
 CapsLock & Ctrl::^`
 Ctrl & CapsLock::^`
 CapsLock & .::^.
-; #+`set to ditto clipboard show
+; ctrl+shift`set to ditto clipboard 
 ; ------------------------------------
 CapsLock & alt::#`
 CapsLock & v::Send {Shift down}{Ins}{Shift up}
