@@ -141,14 +141,10 @@ CapsLock & Space::
   KeyWait, Space
   Send {Ctrl Up}{LWin Up}{Space Up}
 Return
-CapsLock & Shift::
-  Send {Ctrl Down}{. Down}
-  KeyWait, Ctrl
-  Send {Ctrl Up}{. Up}
-Return
-Shift & CapsLock::Send {Ctrl Down}{. Down}{. Up}
-; ------------------------------------
-; ctrl+shift+`set to ditto paste
+CapsLock & Ctrl::^`
+Ctrl & CapsLock::^`
+CapsLock & .::^.
+; #+`set to ditto clipboard show
 ; ------------------------------------
 CapsLock & alt::#`
 CapsLock & v::Send {Shift down}{Ins}{Shift up}
