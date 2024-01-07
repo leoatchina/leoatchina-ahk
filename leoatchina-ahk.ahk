@@ -37,8 +37,8 @@ CapsLock & t::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
 ; Volume control
 ; ----------------
 CapsLock & m::Send {Volume_Mute}
-CapsLock & ]::Send {Volume_Up}
-CapsLock & [::Send {Volume_Down}
+CapsLock & k::Send {Volume_Up}
+CapsLock & j::Send {Volume_Down}
 ; ----------------
 ; Run taskmgr
 ; ----------------
@@ -72,10 +72,10 @@ CapsLock & l up::SendInput {Blind}{End Up}
 ; ----------------
 ; PgUp PgDn
 ; ----------------
-CapsLock & k::SendInput {Blind}{PgUp DownTemp}
-CapsLock & k up::SendInput {Blind}{PgUp Up}
-CapsLock & j::SendInput {Blind}{PgDn DownTemp}
-CapsLock & j up::SendInput {Blind}{PgDn Up}
+CapsLock & b::SendInput {Blind}{PgUp DownTemp}
+CapsLock & b up::SendInput {Blind}{PgUp Up}
+CapsLock & f::SendInput {Blind}{PgDn DownTemp}
+CapsLock & f up::SendInput {Blind}{PgDn Up}
 ; ----------------
 ; BS Del
 ; ----------------
