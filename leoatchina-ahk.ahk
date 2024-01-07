@@ -20,6 +20,15 @@ Capslock & q::
 Send !{F4}
 return
 ; ----------------
+; Tab
+; ----------------
+CapsLock & j::
+Send {Tab}
+return
+CapsLock & k::
+Send +{Tab}
+return
+; ----------------
 ; Del
 ; ----------------
 CapsLock & backspace::SendInput {Blind}{Del DownTemp}
@@ -37,8 +46,8 @@ CapsLock & t::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
 ; Volume control
 ; ----------------
 CapsLock & m::Send {Volume_Mute}
-CapsLock & k::Send {Volume_Up}
-CapsLock & j::Send {Volume_Down}
+CapsLock & ]::Send {Volume_Up}
+CapsLock & [::Send {Volume_Down}
 ; ----------------
 ; Run taskmgr
 ; ----------------
