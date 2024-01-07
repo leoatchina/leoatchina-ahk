@@ -13,8 +13,6 @@ CapsLock & `::SendInput {Blind}{Esc DownTemp}
 CapsLock & ` up::SendInput {Blind}{Esc Up}
 CapsLock & e::SendInput {Blind}{Esc DownTemp}
 CapsLock & e up::SendInput {Blind}{Esc Up}
-CapsLock & ]::SendInput {Blind}{Esc DownTemp}
-CapsLock & ] up::SendInput {Blind}{Esc Up}
 ; ----------------
 ; QUIT 
 ; ----------------
@@ -39,8 +37,8 @@ CapsLock & t::RUN shell:AppsFolder\Microsoft.Todos_8wekyb3d8bbwe!App
 ; Volume control
 ; ----------------
 CapsLock & m::Send {Volume_Mute}
-CapsLock & p::Send {Volume_Up}
-CapsLock & n::Send {Volume_Down}
+CapsLock & ]::Send {Volume_Up}
+CapsLock & [::Send {Volume_Down}
 ; ----------------
 ; Run taskmgr
 ; ----------------
@@ -60,6 +58,10 @@ CapsLock & w::Send {Blind}{Up DownTemp}
 CapsLock & w up::Send {Blind}{Up Up}
 CapsLock & d::Send {Blind}{Right DownTemp}
 CapsLock & d up::Send {Blind}{Right Up}
+CapsLock & n::Send {Blind}{Down DownTemp}
+CapsLock & n up::Send {Blind}{Down Up}
+CapsLock & p::Send {Blind}{Up DownTemp}
+CapsLock & p up::Send {Blind}{Up Up}
 ; ----------------
 ; Home End
 ; ----------------
