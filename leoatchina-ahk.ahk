@@ -11,10 +11,16 @@ SetCapsLockState, AlwaysOff
 ; ----------------
 CapsLock & `::SendInput {Blind}{Esc DownTemp}
 CapsLock & ` up::SendInput {Blind}{Esc Up}
-CapsLock & [::SendInput {Blind}{Esc DownTemp}
-CapsLock & [ up::SendInput {Blind}{Esc Up}
+CapsLock & e::SendInput {Blind}{Esc DownTemp}
+CapsLock & e up::SendInput {Blind}{Esc Up}
 CapsLock & ]::SendInput {Blind}{Esc DownTemp}
 CapsLock & ] up::SendInput {Blind}{Esc Up}
+; ----------------
+; QUIT 
+; ----------------
+Capslock & q::
+Send !{F4}
+return
 ; ----------------
 ; Del
 ; ----------------
@@ -46,36 +52,28 @@ CapsLock & o::Run explorer.exe
 ; ----------------
 ; Left, Down, Up, Right
 ; ----------------
-CapsLock & h::Send {Blind}{Left DownTemp}
-CapsLock & h up::Send {Blind}{Left Up}
 CapsLock & a::Send {Blind}{Left DownTemp}
 CapsLock & a up::Send {Blind}{Left Up}
-CapsLock & j::Send {Blind}{Down DownTemp}
-CapsLock & j up::Send {Blind}{Down Up}
 CapsLock & s::Send {Blind}{Down DownTemp}
 CapsLock & s up::Send {Blind}{Down Up}
-CapsLock & k::Send {Blind}{Up DownTemp}
-CapsLock & k up::Send {Blind}{Up Up}
 CapsLock & w::Send {Blind}{Up DownTemp}
 CapsLock & w up::Send {Blind}{Up Up}
-CapsLock & l::Send {Blind}{Right DownTemp}
-CapsLock & l up::Send {Blind}{Right Up}
 CapsLock & d::Send {Blind}{Right DownTemp}
 CapsLock & d up::Send {Blind}{Right Up}
 ; ----------------
 ; Home End
 ; ----------------
-CapsLock & b::SendInput {Blind}{Home DownTemp}
-CapsLock & b up::SendInput {Blind}{Home Up}
-CapsLock & f::SendInput {Blind}{End DownTemp}
-CapsLock & f up::SendInput {Blind}{End Up}
+CapsLock & h::SendInput {Blind}{Home DownTemp}
+CapsLock & h up::SendInput {Blind}{Home Up}
+CapsLock & l::SendInput {Blind}{End DownTemp}
+CapsLock & l up::SendInput {Blind}{End Up}
 ; ----------------
 ; PgUp PgDn
 ; ----------------
-CapsLock & q::SendInput {Blind}{PgUp DownTemp}
-CapsLock & q up::SendInput {Blind}{PgUp Up}
-CapsLock & e::SendInput {Blind}{PgDn DownTemp}
-CapsLock & e up::SendInput {Blind}{PgDn Up}
+CapsLock & k::SendInput {Blind}{PgUp DownTemp}
+CapsLock & k up::SendInput {Blind}{PgUp Up}
+CapsLock & j::SendInput {Blind}{PgDn DownTemp}
+CapsLock & j up::SendInput {Blind}{PgDn Up}
 ; ----------------
 ; BS Del
 ; ----------------
@@ -159,7 +157,7 @@ clipboard := tmp
 clipwait 0.1
 return
 ; ------------------------------------
-; proe ONLY, 两侧键作为中键
+; proe, 两侧键作为中键
 ; ------------------------------------
 #NoEnv
 #SingleInstance Force
