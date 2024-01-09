@@ -17,7 +17,7 @@ CapsLock & e up::SendInput {Blind}{Esc Up}
 ; QUIT 
 ; ----------------
 Capslock & q::
-Send !{F4}
+Send {ESC}
 return
 ; ----------------
 ; Tab
