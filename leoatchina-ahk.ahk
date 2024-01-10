@@ -1,3 +1,4 @@
+; #是win, !是alt, ^是ctrl, +是shift
 #Persistent
 SetCapsLockState, AlwaysOff
 ; ----------------
@@ -17,16 +18,16 @@ CapsLock & e up::SendInput {Blind}{Esc Up}
 ; QUIT 
 ; ----------------
 Capslock & q::
-Send !{F4}
+Send {ESC}
 return
 ; ----------------
 ; Tab
 ; ----------------
 CapsLock & j::
-Send {Tab}
+Send ^{Tab}
 return
 CapsLock & k::
-Send +{Tab}
+Send ^+{Tab}
 return
 ; ----------------
 ; Del
@@ -159,7 +160,7 @@ CapsLock & alt::#`
 CapsLock & v::Send {Shift down}{Ins}{Shift up}
 CapsLock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; ------------------------------------
-; 去除复制来的内容里的回车, 按win+alt+c,  #是win, !是alt, ^是ctrl, +是shift
+; 去除复制来的内容里的回车, 按win+alt+c
 ; ------------------------------------
 #!c::
 tmp := RegExReplace(clipboard, "(\S.*?)\R(.*?\S)", "$1 $2")
