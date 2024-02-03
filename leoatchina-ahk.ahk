@@ -8,14 +8,7 @@ SetCapsLockState, AlwaysOff
 #u::Send ^{F2}
 #b::Send !{F1}
 ; ----------------
-; Esc
-; ----------------
-CapsLock & `::SendInput {Blind}{Esc DownTemp}
-CapsLock & ` up::SendInput {Blind}{Esc Up}
-CapsLock & e::SendInput {Blind}{Esc DownTemp}
-CapsLock & e up::SendInput {Blind}{Esc Up}
-; ----------------
-; QUIT 
+; ESC
 ; ----------------
 Capslock & q::
 Send {ESC}
@@ -139,6 +132,17 @@ CapsLock & i::^!+i
 ; ------------------------------------
 CapsLock & z::^!+z
 ; ------------------------------------
+; proe, 两侧键作为中键
+; ------------------------------------
+#NoEnv
+#SingleInstance Force
+#InstallKeybdHook
+#InstallMouseHook
+#UseHook
+#IfWinActive ahk_exe xtop.exe
+XButton1::MButton
+XButton2::MButton
+; ------------------------------------
 ; Input method control change
 ; ------------------------------------
 CapsLock & Enter::
@@ -154,28 +158,24 @@ Return
 CapsLock & Ctrl::^`
 Ctrl & CapsLock::^`
 CapsLock & .::^.
-; ctrl+shift+win+` set to ditto clipboard 
+; ------------------------------------
+; ctrl+shift+win+` set to ditto clipboard
 ; ------------------------------------
 CapsLock & alt::^+#`
 CapsLock & v::Send {Shift down}{Ins}{Shift up}
 CapsLock & c::Send {Ctrl down}{Ins}{Ctrl up}
 ; ------------------------------------
-; 去除复制来的内容里的回车, 按win+alt+c
+; 去除复制来的内容里的回车
 ; ------------------------------------
-#!c::
+CapsLock & `::
 tmp := RegExReplace(clipboard, "(\S.*?)\R(.*?\S)", "$1 $2")
 clipboard := tmp
-; StringReplace clipboard, clipboard, % " ", % "", A
 clipwait 0.1
 return
 ; ------------------------------------
-; proe, 两侧键作为中键
+; 将剪贴板的内容转换为纯文本
 ; ------------------------------------
-#NoEnv
-#SingleInstance Force
-#InstallKeybdHook
-#InstallMouseHook
-#UseHook
-#IfWinActive ahk_exe xtop.exe
-XButton1::MButton
-XButton2::MButton
+CapsLock & e::
+Clipboard = %Clipboard%
+clipwait 0.1
+return
