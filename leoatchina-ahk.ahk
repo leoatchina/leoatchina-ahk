@@ -12,16 +12,16 @@ SetCapsLockState, AlwaysOff
 ; ----------------
 Capslock & q::
 Send {ESC}
-return
+Return
 ; ----------------
 ; Tab
 ; ----------------
 CapsLock & j::
 Send ^{Tab}
-return
+Return
 CapsLock & k::
 Send ^+{Tab}
-return
+Return
 ; ----------------
 ; Del
 ; ----------------
@@ -132,6 +132,43 @@ CapsLock & i::^!+i
 ; ------------------------------------
 CapsLock & z::^!+z
 ; ------------------------------------
+; Input method control change
+; ------------------------------------
+CapsLock & Enter::
+Send {LWin Down}{Space Down}
+KeyWait, Enter
+Send {LWin Up}{Space Up}
+Return
+CapsLock & Space::
+Send {Ctrl Down}{LWin Down}{Space Down}
+KeyWait, Space
+Send {Ctrl Up}{LWin Up}{Space Up}
+Return
+CapsLock & Ctrl::^`
+Ctrl & CapsLock::^`
+CapsLock & .::^.
+; ------------------------------------
+; 去除复制来的内容里的回车
+; ------------------------------------
+CapsLock & `::
+tmp := RegExReplace(clipboard, "(\S.*?)\R(.*?\S)", "$1 $2")
+clipboard := tmp
+clipwait 0.1
+Return
+; ------------------------------------
+; 将剪贴板的内容转换为纯文本
+; ------------------------------------
+CapsLock & e::
+Clipboard = %Clipboard%
+clipwait 0.1
+Return
+; ------------------------------------
+; ctrl+shift+win+` set to ditto clipboard
+; ------------------------------------
+CapsLock & alt::^+#`
+CapsLock & v::Send {Shift down}{Ins}{Shift up}
+CapsLock & c::Send {Ctrl down}{Ins}{Ctrl up}
+; ------------------------------------
 ; proe, 两侧键作为中键
 ; ------------------------------------
 #NoEnv
@@ -142,40 +179,3 @@ CapsLock & z::^!+z
 #IfWinActive ahk_exe xtop.exe
 XButton1::MButton
 XButton2::MButton
-; ------------------------------------
-; Input method control change
-; ------------------------------------
-CapsLock & Enter::
-  Send {LWin Down}{Space Down}
-  KeyWait, Enter
-  Send {LWin Up}{Space Up}
-Return
-CapsLock & Space::
-  Send {Ctrl Down}{LWin Down}{Space Down}
-  KeyWait, Space
-  Send {Ctrl Up}{LWin Up}{Space Up}
-Return
-CapsLock & Ctrl::^`
-Ctrl & CapsLock::^`
-CapsLock & .::^.
-; ------------------------------------
-; ctrl+shift+win+` set to ditto clipboard
-; ------------------------------------
-CapsLock & alt::^+#`
-CapsLock & v::Send {Shift down}{Ins}{Shift up}
-CapsLock & c::Send {Ctrl down}{Ins}{Ctrl up}
-; ------------------------------------
-; 去除复制来的内容里的回车
-; ------------------------------------
-CapsLock & `::
-tmp := RegExReplace(clipboard, "(\S.*?)\R(.*?\S)", "$1 $2")
-clipboard := tmp
-clipwait 0.1
-return
-; ------------------------------------
-; 将剪贴板的内容转换为纯文本
-; ------------------------------------
-CapsLock & e::
-Clipboard = %Clipboard%
-clipwait 0.1
-return
